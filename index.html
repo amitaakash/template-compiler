@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generic Client-Side HTML Compiler</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-page: #f3f4f6;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --border: #e5e7eb;
+    }
+
+    body {
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.5;
+      margin: 0;
+      padding: 2rem;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Layout Containers */
+    .app-container {
+      display: flex;
+      gap: 2rem;
+      max-width: 1600px;
+      margin: 0 auto;
+      align-items: flex-start;
+      min-height: calc(100vh - 4rem);
+    }
+
+    .left-pane {
+      flex: 0 0 450px;
+      width: 450px;
+    }
+
+    .right-pane {
+      flex: 1;
+      min-width: 0;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ui-container {
+      width: 100%;
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      border: 1px solid var(--border);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.75rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .upload-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    input[type="file"] {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    button {
+      flex: 1;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background-color: var(--primary-hover);
+    }
+
+    button:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+
+    .status-message {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    .status-success {
+      display: block;
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+
+    .status-error {
+      display: block;
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* Preview Component Styles */
+    .preview-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .preview-header {
+      background: #f3f4f6;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 0.375rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.red {
+      background-color: #ef4444;
+    }
+
+    .dot.yellow {
+      background-color: #f59e0b;
+    }
+
+    .dot.green {
+      background-color: #10b981;
+    }
+
+    .preview-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #4b5563;
+      font-family: monospace;
+      flex: 1;
+      text-align: left;
+    }
+
+    .preview-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      background-color: white;
+      color: #374151;
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .action-btn svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .action-btn:hover:not(:disabled) {
+      background-color: #f9fafb;
+      border-color: #d1d5db;
+      color: var(--text-main);
+    }
+
+    .action-btn:disabled {
+      background-color: #f3f4f6;
+      color: #9ca3af;
+      border-color: #e5e7eb;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .preview-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #fafafa;
+      position: relative;
+      min-height: 450px;
+    }
+
+    .preview-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      color: #9ca3af;
+      background: #fafafa;
+      z-index: 10;
+    }
+
+    .preview-placeholder svg {
+      width: 48px;
+      height: 48px;
+      color: #d1d5db;
+      margin-bottom: 1rem;
+    }
+
+    #previewIframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      flex: 1;
+      background: white;
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      .app-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .left-pane {
+        flex: none;
+        width: 100%;
+      }
+
+      .right-pane {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="left-pane">
+      <div class="ui-container">
+        <h1>Template Compiler</h1>
+        <p>
+          Upload any HTML layout template along with its matching JSON data
+          structure to dynamically build a fully populated static page.
+        </p>
+
+        <hr style="border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0" />
+
+        <div class="upload-group">
+          <label for="templateFile">1. Select HTML Template</label>
+          <input type="file" id="templateFile" accept=".html" />
+        </div>
+
+        <div class="upload-group">
+          <label for="dataFile">2. Select JSON Dataset</label>
+          <input type="file" id="dataFile" accept=".json" />
+        </div>
+
+        <div class="btn-container">
+          <button id="compileBtn">Compile Dataset</button>
+        </div>
+
+        <div id="statusBox" class="status-message"></div>
+      </div>
+    </div>
+
+    <div class="right-pane">
+      <div class="preview-card">
+        <div class="preview-header">
+          <div class="browser-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="preview-title">compiled_output.html</div>
+          <div class="preview-actions">
+            <button id="printBtn" class="action-btn" title="Print Output" disabled>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.618 0-1.113-.497-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.865 48.865 0 0 0-14.325 0C3.768 7.281 3 8.215 3 9.296v6.454a2.25 2.25 0 0 0 2.25 2.25h1.091M9 10.137h6M9 14h6" />
+              </svg>
+              Print
+            </button>
+            <button id="downloadBtn" class="action-btn" title="Download HTML" disabled>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              Download
+            </button>
+          </div>
+        </div>
+        <div class="preview-body" id="previewBody">
+          <div id="previewPlaceholder" class="preview-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+            </svg>
+            <p>Click "Compile Dataset" to generate live preview</p>
+          </div>
+          <iframe id="previewIframe" title="Compiled Output Preview"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /**
+     * Engine Utility: Converts a number to its English word representation.
+     */
+    function numberToWords(num) {
+      const ones = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+      const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+      num = parseInt(num, 10);
+      if (isNaN(num)) return "";
+      if (num === 0) return "zero";
+
+      function convert(n) {
+        if (n < 20) return ones[n];
+        if (n < 100) return tens[Math.floor(n / 10)] + (n % 10 !== 0 ? "-" + ones[n % 10] : "");
+        if (n < 1000) return ones[Math.floor(n / 100)] + " hundred" + (n % 100 !== 0 ? " " + convert(n % 100) : "");
+        if (n < 1000000) return convert(Math.floor(n / 1000)) + " thousand" + (n % 1000 !== 0 ? " " + convert(n % 1000) : "");
+        return n.toString();
+      }
+
+      return convert(num);
+    }
+
+    /**
+     * Engine Utility: Resolves deeply nested object strings (e.g. "user.profile.name")
+     * against a provided data context object.
+     */
+    function getValueByPath(obj, path) {
+      if (!path) return obj;
+      return path.split(".").reduce((acc, part) => {
+        if (acc === undefined || acc === null) return acc;
+        if (part in acc) return acc[part];
+        if (Array.isArray(acc) && acc.length === 1 && acc[0]) {
+          if (part in acc[0]) {
+            return acc[0][part];
+          }
+        }
+        return undefined;
+      }, obj);
+    }
+
+    /**
+     * Engine Core: Recursively evaluates DOM fragments for text replacement strings
+     * and repeating structural loop attributes.
+     */
+    function processTemplateNode(node, contextData) {
+      // Handle array looping structures via custom "data-loop" targeting rules
+      if (node.hasAttribute && node.hasAttribute("data-loop")) {
+        const loopKey = node.getAttribute("data-loop");
+        const loopData = getValueByPath(contextData, loopKey);
+        node.removeAttribute("data-loop"); // Clear template markers out of output
+
+        if (Array.isArray(loopData)) {
+          const parent = node.parentNode;
+
+          loopData.forEach((itemContext) => {
+            const clonedChild = node.cloneNode(true);
+            // Deeply process child nodes using the scoped loop item data context
+            processTemplateNode(clonedChild, itemContext);
+
+            parent.insertBefore(clonedChild, node);
+          });
+
+          // Clear baseline placeholder layout graphic node template element
+          parent.removeChild(node);
+        }
+        return;
+      }
+
+      // Handle raw standard scalar text node replacements
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.nodeValue = node.nodeValue.replace(
+          /\{\{\s*(.+?)\s*\}\}/g,
+          (match, rawExpression) => {
+            const parts = rawExpression.trim().split("|").map(s => s.trim());
+            const expressionPath = parts[0];
+            const filterName = parts[1];
+
+            let resolvedValue = getValueByPath(contextData, expressionPath);
+            if (resolvedValue !== undefined && resolvedValue !== null && resolvedValue !== "") {
+              if (filterName === "numberToWords") {
+                resolvedValue = numberToWords(resolvedValue);
+              }
+              return resolvedValue;
+            }
+            return "_____________";
+          },
+        );
+      }
+
+      // Handle element property structural evaluations recursively across all nested child nodes
+      if (node.childNodes && node.childNodes.length > 0) {
+        // Convert to snapshot array to preserve indexing loop orders safely during clone structural updates
+        const childrenArray = Array.from(node.childNodes);
+        childrenArray.forEach((childNode) =>
+          processTemplateNode(childNode, contextData),
+        );
+      }
+    }
+
+    /**
+     * Master Orchestrator: Combines input strings, parses them into temporary DOM trees,
+     * processes loops/tokens dynamically, and outputs a complete, clean string.
+     */
+    function compileGeneric(htmlString, rawData) {
+      let parsedData =
+        typeof rawData === "string" ? JSON.parse(rawData) : rawData;
+
+      // Generic dataset normalization:
+      // Merge properties of single-item object array wrappers at the root level.
+      if (parsedData && typeof parsedData === "object" && !Array.isArray(parsedData)) {
+        const normalized = {};
+        for (const [key, value] of Object.entries(parsedData)) {
+          if (Array.isArray(value) && value.length === 1 && value[0] && typeof value[0] === 'object' && !Array.isArray(value[0])) {
+            Object.assign(normalized, value[0]);
+          }
+        }
+        parsedData = Object.assign({}, parsedData, normalized);
+      }
+
+      const parser = new DOMParser();
+      const documentDOM = parser.parseFromString(htmlString, "text/html");
+
+      // Check if root data context layer is delivered encapsulated as an array wrapper list
+      if (Array.isArray(parsedData)) {
+        if (parsedData.length > 0 && documentDOM.head) {
+          processTemplateNode(documentDOM.head, parsedData[0]);
+        }
+
+        // Find the wrapper container element inside the HTML template
+        const container =
+          documentDOM.querySelector(".container") || documentDOM.body;
+        const initialChildren = Array.from(container.children);
+
+        // Clear layout component baseline blueprint out of master document structure
+        container.innerHTML = "";
+
+        // Iterate top-level object tree matrices directly
+        parsedData.forEach((dataEntry) => {
+          initialChildren.forEach((blueprintNode) => {
+            const liveWorkingClone = blueprintNode.cloneNode(true);
+            container.appendChild(liveWorkingClone);
+            processTemplateNode(liveWorkingClone, dataEntry);
+          });
+        });
+      } else {
+        // Run single structural pass map execution against root object context framework
+        processTemplateNode(documentDOM.documentElement, parsedData);
+      }
+
+      return "<!DOCTYPE html>\n" + documentDOM.documentElement.outerHTML;
+    }
+
+    // Helper Utility: Wraps FileReaders inside manageable structural Promises
+    function readAsTextAsync(fileTarget) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (event) => resolve(event.target.result);
+        reader.onerror = () =>
+          reject(
+            new Error(
+              `Failed to safely process file resource: ${fileTarget.name}`,
+            ),
+          );
+        reader.readAsText(fileTarget);
+      });
+    }
+
+    // Interactive UI State Mapping Management
+    let finalOutputStringMemoryBuffer = null;
+    let defaultTemplateContent = null;
+    let defaultDataContent = null;
+
+    const uiElements = {
+      template: document.getElementById("templateFile"),
+      data: document.getElementById("dataFile"),
+      compile: document.getElementById("compileBtn"),
+      download: document.getElementById("downloadBtn"),
+      print: document.getElementById("printBtn"),
+      status: document.getElementById("statusBox"),
+      previewIframe: document.getElementById("previewIframe"),
+      previewPlaceholder: document.getElementById("previewPlaceholder"),
+    };
+
+    function displayStatusText(message, severityClass) {
+      uiElements.status.textContent = message;
+      uiElements.status.className = `status-message status-${severityClass}`;
+    }
+
+    // Load defaults on startup
+    async function loadDefaults() {
+      try {
+        const tempRes = await fetch("page_updated.html");
+        if (tempRes.ok) {
+          defaultTemplateContent = await tempRes.text();
+          const templateLabel = document.querySelector('label[for="templateFile"]');
+          if (templateLabel) {
+            templateLabel.textContent = "1. Select HTML Template (Loaded Default: page_updated.html)";
+          }
+        }
+        const dataRes = await fetch("TCC_consolidated_data.json");
+        if (dataRes.ok) {
+          defaultDataContent = await dataRes.text();
+          const dataLabel = document.querySelector('label[for="dataFile"]');
+          if (dataLabel) {
+            dataLabel.textContent = "2. Select JSON Dataset (Loaded Default: TCC_consolidated_data.json)";
+          }
+        }
+
+        if (defaultTemplateContent && defaultDataContent) {
+          displayStatusText(
+            "Successfully pre-loaded default template (page_updated.html) and dataset (TCC_consolidated_data.json). Click 'Compile Dataset' to build.",
+            "success"
+          );
+
+          // Auto-compile default files on load
+          uiElements.compile.click();
+        }
+      } catch (e) {
+        console.warn("Could not pre-load defaults: ", e);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", loadDefaults);
+
+    uiElements.compile.addEventListener("click", async () => {
+      const templateFile = uiElements.template.files[0];
+      const dataFile = uiElements.data.files[0];
+
+      if (!templateFile && !defaultTemplateContent) {
+        displayStatusText(
+          "Error: Both a source HTML layout blueprint and valid JSON dataset are required.",
+          "error",
+        );
+        return;
+      }
+      if (!dataFile && !defaultDataContent) {
+        displayStatusText(
+          "Error: Both a source HTML layout blueprint and valid JSON dataset are required.",
+          "error",
+        );
+        return;
+      }
+
+      try {
+        displayStatusText("Ingesting local target assets...", "success");
+
+        let templateMarkupString = defaultTemplateContent;
+        if (templateFile) {
+          templateMarkupString = await readAsTextAsync(templateFile);
+        }
+
+        let dataPayloadString = defaultDataContent;
+        if (dataFile) {
+          dataPayloadString = await readAsTextAsync(dataFile);
+        }
+
+        displayStatusText(
+          "Executing dynamic structural token resolution loops...",
+          "success",
+        );
+        finalOutputStringMemoryBuffer = compileGeneric(
+          templateMarkupString,
+          dataPayloadString,
+        );
+
+        displayStatusText(
+          "Success! Your processed file package output buffer is complete and ready.",
+          "success",
+        );
+        uiElements.download.disabled = false;
+        if (uiElements.print) uiElements.print.disabled = false;
+
+        // Render preview inside iframe
+        if (uiElements.previewIframe) {
+          const iframeDoc = uiElements.previewIframe.contentDocument || uiElements.previewIframe.contentWindow.document;
+          iframeDoc.open();
+          iframeDoc.write(finalOutputStringMemoryBuffer);
+          iframeDoc.close();
+          uiElements.previewIframe.style.display = "block";
+          if (uiElements.previewPlaceholder) {
+            uiElements.previewPlaceholder.style.display = "none";
+          }
+        }
+      } catch (exception) {
+        displayStatusText(
+          `Compilation Aborted: ${exception.message}`,
+          "error",
+        );
+        uiElements.download.disabled = true;
+        if (uiElements.print) uiElements.print.disabled = true;
+        finalOutputStringMemoryBuffer = null;
+        if (uiElements.previewIframe) {
+          uiElements.previewIframe.style.display = "none";
+        }
+        if (uiElements.previewPlaceholder) {
+          uiElements.previewPlaceholder.style.display = "flex";
+        }
+      }
+    });
+
+    uiElements.download.addEventListener("click", () => {
+      if (!finalOutputStringMemoryBuffer) return;
+
+      const memoryFileBlob = new Blob([finalOutputStringMemoryBuffer], {
+        type: "text/html;charset=utf-8;",
+      });
+      const temporaryObjectStorageUrl = URL.createObjectURL(memoryFileBlob);
+
+      const virtualLinkAnchorElement = document.createElement("a");
+      virtualLinkAnchorElement.href = temporaryObjectStorageUrl;
+      virtualLinkAnchorElement.download = "compiled_output.html";
+
+      document.body.appendChild(virtualLinkAnchorElement);
+      virtualLinkAnchorElement.click();
+
+      document.body.removeChild(virtualLinkAnchorElement);
+      URL.revokeObjectURL(temporaryObjectStorageUrl);
+    });
+
+    uiElements.print.addEventListener("click", () => {
+      if (!uiElements.previewIframe) return;
+      try {
+        const iframeWindow = uiElements.previewIframe.contentWindow;
+        iframeWindow.focus();
+        iframeWindow.print();
+      } catch (e) {
+        console.error("Failed to print preview content: ", e);
+        alert("Unable to trigger print. Please check console for details.");
+      }
+    });
+  </script>
+</body>
+
+</html>
