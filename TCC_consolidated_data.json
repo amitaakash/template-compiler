@@ -7,85 +7,96 @@
 				"endPage": "80",
 				"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
 			},
-			"essentialQualificationCriteria": [
-				{
-					"pointNumber": "1",
-					"value": "The bidder should possess the experience of having successfully completed or substantially completed similar works during the last 7-years (ending last day of the month previous to the one in which tenders are invited) which should be anyone of the following:-(i)(ii)(iii)One similar work costing not less than the amount equal to 60% of the estimated cost.",
-					"startPage": "44",
-					"endPage": "44",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "2",
-					"value": "The average annual financial turnover during the last 3-years should be at least 30% of the estimated cost.Notes:a)The financial turnover shall mean Revenue from Operations of standalone Financial Statements of the Bidder. b)The financial turnover shall mean Revenue from Operations of standalone Financial Statements of the Bidder.c) In case the financials of immediate prior Financial Year have not yet been audited till the time of submission of the tender, the bidder can submit an Affidavit to this effect stating that 'the financial results of the immediate prior Financial Year has actually not been audited so far'. In such cases, the financials of preceding three audited financial years will be taken into consideration for evaluating the Annual Financial Turnover of the bidder. In the absence of such an Affidavit, the benefit of considering three preceding years would not be given and the bid would be evaluated considering turnover for two preceding years only.",
-					"startPage": "44",
-					"endPage": "44",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "3",
-					"value": "Net worth of the bidder should be at least 10% of the estimated cost of the work. This will be judged from the audited Balance Sheet of the last financial year ending on a date not prior to 18 months from the date of invitation of the tender, but not earlier than a year immediate financial year.",
-					"startPage": "45",
-					"endPage": "45",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "3.1",
-					"value": "The bidder whose annual financial turnover do not exceed Rs 50 Lakhs should submit copy of applicable ITR under Income tax rules which is generated from Income tax portal and duly self- attested to judge their net worth and turnover.",
-					"startPage": "45",
-					"endPage": "45",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "4",
-					"value": "The bidder should submit completion certificates in reference to S.No.1 (minimum 3 nos., 2 nos. or 1 no. as the case may be) above issued by Government Organizations/ Semi Government Organizations/ Public Sector Undertakings/ Autonomous bodies/ Municipal bodies/ Public Limited Company / Concessionaire Company/ Private Company/ JV Company for having successfully completed similar works in the last 7 years. Certificates issued by such Public Limited Company / Concessionaire Company /Private Company/ JV Company must be supported by Tax Deducted at Source (TDS) Certificates (Form 16A/ 26AS) in evidence of the value of work executed. In case of supply contracts, Copies of GSTR-1/GSTR 3B to be submitted by the bidder as a proof of payment received for supply. Before implementation of GST where no TDS is deducted, relevant copies of purchase order and invoices along with bill wise details of payment received duly certified by Chartered Accountant should be submitted by the bidder in support of value of work executed.",
-					"startPage": "45",
-					"endPage": "45",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "4.1",
-					"value": "It shall be mandatorily incumbent upon the tenderer to identify, state and submit the supporting documents duly self-attested by which they/he is qualifying the Qualifying Criteria mentioned in the Tender Document.",
-					"startPage": "45",
-					"endPage": "45",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "NOTE:-",
-					"value": "i)Value/ Quantity of Key Construction activities of a successfully completed work done by a member in an earlier JV shall be reckoned only to the extent of the concerned member's share in that JV for the purpose of satisfying his/her compliance to the above-mentioned technical eligibility criteria in the tender. A copy of the JV agreement submitted to client at the time of award of work or any subsequent change in the provision of original JV agreement as agreed by the client shall be submitted along with tender document, while claiming share of the experience in the previous JV. ii) Credentials if submitted in foreign currency shall be converted into Indian currency i.e., Indian Rupee as under: The conversion rate of US Dollars into Rupees shall be the daily representative exchange rates published by the Reserve Bank of India/ Financial Benchmarks India Pvt. Ltd. for the relevant date. Where, relevant date shall be 1st day (i.e. 1st April) of the relevant year (financial year) in which work was completed. In case of any other currency, the same shall first be converted to US Dollars as on1st day (i.e. 1st April) of the relevant year (financial year) in which work was completed and the amount so derived in US Dollars shall be converted into Rupees at the aforesaid rate. The conversion rate of such currencies shall be the daily representative exchange rates published by the International Monetary Fund for the relevant date.",
-					"startPage": "45",
-					"endPage": "45",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "5",
-					"value": "Bid Capacity – Deleted",
-					"startPage": "46",
-					"endPage": "46",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "6",
-					"value": "The bidder shall sign the Affidavit as enclosed in Annexure-'IV' of 'Instructions to Tenderers'. This Affidavit shall be signed by all the partners of Partnership firm and all the members of Joint Venture (JV)/ MOU (if participation of JV/ MOU is permitted in the tender).",
-					"startPage": "46",
-					"endPage": "46",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "7",
-					"value": "If the bidder (any partners of JV, in case JV is permitted in the tender) is in Corporate Insolvency Resolution Process (CIRP)/ liquidation/ Winding up/ CDR/SDR/S4A/Flexible Structuring or any other restructuring scheme due to financial stress and is in default on any debt obligations on the bid due date. An undertaking of bidder (All partners of JV in case JV is permitted in the tender) (duly certified by the statutory auditor of the bidder with UDIN where the accounts are audited. In other cases the same may be certified by Charted Accounted with UDIN) must be submitted along with the bid.",
-					"startPage": "46",
-					"endPage": "46",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				},
-				{
-					"pointNumber": "Explanation",
-					"value": "[Explanation for above Essential Qualifying Criteria No. 1 to 7:Substantially Completed Work means an ongoing work in which payment equal to or more than 90% of the present contract value (excluding the payment made for adjustment of Price variation (PVC), if any) has been made to the contractor in that ongoing contract and no proceedings of termination of contract on Contractor's default has been initiated. The credential certificate in this regard should have been issued not prior to 60 days of date of invitation of present tender.In case of substantially completed work, the total gross amount already paid including the PVC amount (if paid), as mentioned in the certificate, shall be considered as the cost of substantially completed work.If a provisional completion certificate is issued by the concerned organization, such work shall be considered for fulfillment of credentials. However, the value of work done shall be considered to the extent of actual amount paid by the client.In case a work is considered similar in nature for fulfillment of technical credentials, the overall cost of that work including Price Variation amount if any shall be considered and no separate evaluation for each component of that work shall be made to decide eligibility.In case of newly formed partnership firm, the credentials of individual partners from previous propriety firm(s) or dissolved previous partnership firm(s) or split previous partnership firm(s), shall be considered only to the extent of their share in previous entity on the date of dissolution / split and their share in newly formed partnership firm. For example, a partner A had 30% share in previous entity and his share in present partnership firm is 20%. In the present tender under consideration, the credentials of partner A will be considered to the extent of 0.3*0.2* value of the work done in the previous entity. For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deed(s), dissolution deed(s) and proof of surrender of PAN No.(s) in case of dissolution of partnership firm(s) etc.In case of existing partnership firm, if any one or more partners quit the partnership firm, the credentials of remaining partnership firm shall be re-worked out i.e., the quitting partner(s) shall take away his credentials to the extent of his share on the date of quitting the partnership firm(e.g. in a partnership firm of partners A, B & C having share 30%, 30% & 40% respectively and credentials of Rs 10 crore; in case partner C quits the firm, the credentials of this partnership firm shall remain as Rs 6crore). For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deed(s), dissolution deed(s) and proof of surrender of PAN No.(s) in case of dissolution of partnership firm(s) etc.In case of existing partnership firm if any new partner(s) joins the firm without any modification in the name and PAN/TAN no. of the firm, the credentials of partnership firm shall get enhanced to the extent of credentials of newly added partner(s) on the same principles as mentioned in item 6 above. For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deeds, dissolution/splitting deeds and proof of surrender of PAN No.(s) in case of dissolution of partnership firm etc.In case a tenderer is LLP, the credentials of tenderer shall be worked out on above lines similar to a partnership firm.",
-					"startPage": "46",
-					"endPage": "48",
-					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
-				}
-			],
+			"essentialQualificationCriteria": {
+				"value": [
+					{
+						"pointNumber": "1",
+						"value": "The bidder should possess the experience of having successfully completed or substantially completed similar works during the last 7-years (ending last day of the month previous to the one in which tenders are invited) which should be anyone of the following:-(i)(ii)(iii)One similar work costing not less than the amount equal to 60% of the estimated cost. Definition of similar work: {{EQCDefinition.value}}",
+						"startPage": "44",
+						"endPage": "44",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "2",
+						"value": "The average annual financial turnover during the last 3-years should be at least 30% of the estimated cost.Notes:a)The financial turnover shall mean Revenue from Operations of standalone Financial Statements of the Bidder. b)The financial turnover shall mean Revenue from Operations of standalone Financial Statements of the Bidder.c) In case the financials of immediate prior Financial Year have not yet been audited till the time of submission of the tender, the bidder can submit an Affidavit to this effect stating that 'the financial results of the immediate prior Financial Year has actually not been audited so far'. In such cases, the financials of preceding three audited financial years will be taken into consideration for evaluating the Annual Financial Turnover of the bidder. In the absence of such an Affidavit, the benefit of considering three preceding years would not be given and the bid would be evaluated considering turnover for two preceding years only.",
+						"startPage": "44",
+						"endPage": "44",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "3",
+						"value": "Net worth of the bidder should be at least 10% of the estimated cost of the work. This will be judged from the audited Balance Sheet of the last financial year ending on a date not prior to 18 months from the date of invitation of the tender, but not earlier than a year immediate financial year.",
+						"startPage": "45",
+						"endPage": "45",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "3.1",
+						"value": "The bidder whose annual financial turnover do not exceed Rs 50 Lakhs should submit copy of applicable ITR under Income tax rules which is generated from Income tax portal and duly self- attested to judge their net worth and turnover.",
+						"startPage": "45",
+						"endPage": "45",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "4",
+						"value": "The bidder should submit completion certificates in reference to S.No.1 (minimum 3 nos., 2 nos. or 1 no. as the case may be) above issued by Government Organizations/ Semi Government Organizations/ Public Sector Undertakings/ Autonomous bodies/ Municipal bodies/ Public Limited Company / Concessionaire Company/ Private Company/ JV Company for having successfully completed similar works in the last 7 years. Certificates issued by such Public Limited Company / Concessionaire Company /Private Company/ JV Company must be supported by Tax Deducted at Source (TDS) Certificates (Form 16A/ 26AS) in evidence of the value of work executed. In case of supply contracts, Copies of GSTR-1/GSTR 3B to be submitted by the bidder as a proof of payment received for supply. Before implementation of GST where no TDS is deducted, relevant copies of purchase order and invoices along with bill wise details of payment received duly certified by Chartered Accountant should be submitted by the bidder in support of value of work executed.",
+						"startPage": "45",
+						"endPage": "45",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "4.1",
+						"value": "It shall be mandatorily incumbent upon the tenderer to identify, state and submit the supporting documents duly self-attested by which they/he is qualifying the Qualifying Criteria mentioned in the Tender Document.",
+						"startPage": "45",
+						"endPage": "45",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "NOTE:-",
+						"value": "i)Value/ Quantity of Key Construction activities of a successfully completed work done by a member in an earlier JV shall be reckoned only to the extent of the concerned member's share in that JV for the purpose of satisfying his/her compliance to the above-mentioned technical eligibility criteria in the tender. A copy of the JV agreement submitted to client at the time of award of work or any subsequent change in the provision of original JV agreement as agreed by the client shall be submitted along with tender document, while claiming share of the experience in the previous JV. ii) Credentials if submitted in foreign currency shall be converted into Indian currency i.e., Indian Rupee as under: The conversion rate of US Dollars into Rupees shall be the daily representative exchange rates published by the Reserve Bank of India/ Financial Benchmarks India Pvt. Ltd. for the relevant date. Where, relevant date shall be 1st day (i.e. 1st April) of the relevant year (financial year) in which work was completed. In case of any other currency, the same shall first be converted to US Dollars as on1st day (i.e. 1st April) of the relevant year (financial year) in which work was completed and the amount so derived in US Dollars shall be converted into Rupees at the aforesaid rate. The conversion rate of such currencies shall be the daily representative exchange rates published by the International Monetary Fund for the relevant date.",
+						"startPage": "45",
+						"endPage": "45",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "5",
+						"value": "Bid Capacity – Deleted",
+						"startPage": "46",
+						"endPage": "46",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "6",
+						"value": "The bidder shall sign the Affidavit as enclosed in Annexure-'IV' of 'Instructions to Tenderers'. This Affidavit shall be signed by all the partners of Partnership firm and all the members of Joint Venture (JV)/ MOU (if participation of JV/ MOU is permitted in the tender).",
+						"startPage": "46",
+						"endPage": "46",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "7",
+						"value": "If the bidder (any partners of JV, in case JV is permitted in the tender) is in Corporate Insolvency Resolution Process (CIRP)/ liquidation/ Winding up/ CDR/SDR/S4A/Flexible Structuring or any other restructuring scheme due to financial stress and is in default on any debt obligations on the bid due date. An undertaking of bidder (All partners of JV in case JV is permitted in the tender) (duly certified by the statutory auditor of the bidder with UDIN where the accounts are audited. In other cases the same may be certified by Charted Accounted with UDIN) must be submitted along with the bid.",
+						"startPage": "46",
+						"endPage": "46",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					},
+					{
+						"pointNumber": "Explanation",
+						"value": "[Explanation for above Essential Qualifying Criteria No. 1 to 7:Substantially Completed Work means an ongoing work in which payment equal to or more than 90% of the present contract value (excluding the payment made for adjustment of Price variation (PVC), if any) has been made to the contractor in that ongoing contract and no proceedings of termination of contract on Contractor's default has been initiated. The credential certificate in this regard should have been issued not prior to 60 days of date of invitation of present tender.In case of substantially completed work, the total gross amount already paid including the PVC amount (if paid), as mentioned in the certificate, shall be considered as the cost of substantially completed work.If a provisional completion certificate is issued by the concerned organization, such work shall be considered for fulfillment of credentials. However, the value of work done shall be considered to the extent of actual amount paid by the client.In case a work is considered similar in nature for fulfillment of technical credentials, the overall cost of that work including Price Variation amount if any shall be considered and no separate evaluation for each component of that work shall be made to decide eligibility.In case of newly formed partnership firm, the credentials of individual partners from previous propriety firm(s) or dissolved previous partnership firm(s) or split previous partnership firm(s), shall be considered only to the extent of their share in previous entity on the date of dissolution / split and their share in newly formed partnership firm. For example, a partner A had 30% share in previous entity and his share in present partnership firm is 20%. In the present tender under consideration, the credentials of partner A will be considered to the extent of 0.3*0.2* value of the work done in the previous entity. For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deed(s), dissolution deed(s) and proof of surrender of PAN No.(s) in case of dissolution of partnership firm(s) etc.In case of existing partnership firm, if any one or more partners quit the partnership firm, the credentials of remaining partnership firm shall be re-worked out i.e., the quitting partner(s) shall take away his credentials to the extent of his share on the date of quitting the partnership firm(e.g. in a partnership firm of partners A, B & C having share 30%, 30% & 40% respectively and credentials of Rs 10 crore; in case partner C quits the firm, the credentials of this partnership firm shall remain as Rs 6crore). For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deed(s), dissolution deed(s) and proof of surrender of PAN No.(s) in case of dissolution of partnership firm(s) etc.In case of existing partnership firm if any new partner(s) joins the firm without any modification in the name and PAN/TAN no. of the firm, the credentials of partnership firm shall get enhanced to the extent of credentials of newly added partner(s) on the same principles as mentioned in item 6 above. For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deeds, dissolution/splitting deeds and proof of surrender of PAN No.(s) in case of dissolution of partnership firm etc.In case a tenderer is LLP, the credentials of tenderer shall be worked out on above lines similar to a partnership firm.",
+						"startPage": "46",
+						"endPage": "48",
+						"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+					}
+				],
+				"startPage": "44",
+				"endPage": "44",
+				"fileUri": ""
+			},
+			"essentialQualificationCriteriaCompiled": {
+				"value": "<h3>Essential Qualifying Criteria</h3><ol><li>The bidder should possess the experience of having successfully completed or substantially completed similar works during the last 7-years (ending last day of the month previous to the one in which tenders are invited) which should be anyone of the following:<ul><li>(i) Three similar works each costing not less than the amount equal to 30% of the estimated cost.</li><li>OR</li><li>(ii) Two similar works each costing not less than the amount equal to 40% of the estimated cost.</li><li>OR</li><li>(iii) One similar work costing not less than the amount equal to 60% of the estimated cost.</li></ul><p><strong>Similar Work:</strong> Any Civil Engineering works involving Earthwork in Embankment/Cutting and construction of Bridges in Railway/Metro/Highway/Expressway projects.</p></li><li>The average annual financial turnover during the last 3-years should be at least 30% of the estimated cost.<p><strong>Notes:</strong></p><ul><li>b) The financial turnover shall mean Revenue from Operations of standalone Financial Statements of the Bidder.</li><li>c) In case the financials of immediate prior Financial Year have not yet been audited till the time of submission of the tender, the bidder can submit an Affidavit to this effect stating that 'the financial results of the immediate prior Financial Year has actually not been audited so far'. In such cases, the financials of preceding three audited financial years will be taken into consideration for evaluating the Annual Financial Turnover of the bidder. In the absence of such an Affidavit, the benefit of considering three preceding years would not be given and the bid would be evaluated considering turnover for two preceding years only.</li></ul></li><li>Net worth of the bidder should be at least 10% of the estimated cost of the work. This will be judged from the audited Balance Sheet of the last financial year ending on a date not prior to 18 months from the date of invitation of the tender, but not earlier than a year immediate financial year.<ul><li>3.1 The bidder whose annual financial turnover do not exceed Rs 50 Lakhs should submit copy of applicable ITR under Income tax rules which is generated from Income tax portal and duly self- attested to judge their net worth and turnover.</li></ul></li><li>The bidder should submit completion certificates in reference to S.No.1 (minimum 3 nos., 2 nos. or 1 no. as the case may be) above issued by Government Organizations/ Semi Government Organizations/ Public Sector Undertakings/ Autonomous bodies/ Municipal bodies/ Public Limited Company / Concessionaire Company/ Private Company/ JV Company for having successfully completed similar works in the last 7 years. Certificates issued by such Public Limited Company / Concessionaire Company /Private Company/ JV Company must be supported by Tax Deducted at Source (TDS) Certificates (Form 16A/ 26AS) in evidence of the value of work executed. In case of supply contracts, Copies of GSTR-1/GSTR 3B to be submitted by the bidder as a proof of payment received for supply. Before implementation of GST where no TDS is deducted, relevant copies of purchase order and invoices along with bill wise details of payment received duly certified by Chartered Accountant should be submitted by the bidder in support of value of work executed.<ul><li>4.1 It shall be mandatorily incumbent upon the tenderer to identify, state and submit the supporting documents duly self-attested by which they/he is qualifying the Qualifying Criteria mentioned in the Tender Document.</li></ul><p><strong>NOTE:-</strong></p><ul><li>i) Value/ Quantity of Key Construction activities of a successfully completed work done by a member in an earlier JV shall be reckoned only to the extent of the concerned member's share in that JV for the purpose of satisfying his/her compliance to the above-mentioned technical eligibility criteria in the tender. A copy of the JV agreement submitted to client at the time of award of work or any subsequent change in the provision of original JV agreement as agreed by the client shall be submitted along with tender document, while claiming share of the experience in the previous JV.</li><li>ii) Credentials if submitted in foreign currency shall be converted into Indian currency i.e., Indian Rupee as under: first be converted to US Dollars as on 1st day (i.e. 1st April) of the relevant year (financial year) in which work was completed and the amount so derived in US Dollars shall be converted into Rupees at the aforesaid rate. The conversion rate of such currencies shall be the daily representative exchange rates published by the International Monetary Fund for the relevant date.</li></ul></li><li>Bid Capacity – Deleted</li><li>The bidder shall sign the Affidavit as enclosed in Annexure-'IV' of 'Instructions to Tenderers'. This Affidavit shall be signed by all the partners of Partnership firm and all the members of Joint Venture (JV)/ MOU (if participation of JV/ MOU is permitted in the tender).</li><li>If the bidder (any partners of JV, in case JV is permitted in the tender) is in Corporate Insolvency Resolution Process (CIRP)/ liquidation/ Winding up/ CDR/SDR/S4A/Flexible Structuring or any other restructuring scheme due to financial stress and is in default on any debt obligations on the bid due date. An undertaking of bidder (All partners of JV in case JV is permitted in the tender) (duly certified by the statutory auditor of the bidder with UDIN where the accounts are audited. In other cases the same may be certified by Charted Accounted with UDIN) must be submitted along with the bid.</li></ol>",
+				"startPage": "44",
+				"endPage": "44",
+				"fileUri": ""
+			},
 			"EQCDefinition": {
 				"value": "Any Civil Engineering works involving Earthwork in Embankment/Cutting and construction of Bridges in Railway/Metro/Highway/Expressway projects.",
 				"startPage": "44",

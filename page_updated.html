@@ -452,7 +452,11 @@
     <h2>
       6. ESSENTIAL QUALIFYING CRITERIA ( {{formData.tenderFileCPStartRange}} - {{formData.tenderFileCPEndRange}})
     </h2>
-    <p>{{EQCDefinition.value}}</p>
+    <!--  <p data-loop="extractedData.essentialQualificationCriteria.value"><strong>{{pointNumber}}.</strong> {{value}}</p>
+    <p>{{EQCDefinition.value}}</p> -->
+
+    {{extractedData.essentialQualificationCriteriaCompiled.value}}
+
     <h2>7. DOCUMENTS SUBMITTED BY THE BIDDERS</h2>
     <p>
       As per clause {{itt_clause_docs.value}} of Instruction to Tenderers, the
