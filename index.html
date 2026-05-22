@@ -31,7 +31,7 @@
     .app-container {
       display: flex;
       gap: 2rem;
-      max-width: 1600px;
+
       margin: 0 auto;
       align-items: flex-start;
       min-height: calc(100vh - 4rem);
@@ -316,6 +316,13 @@
           <input type="file" id="dataFile" accept=".json" />
         </div>
 
+        <div class="upload-group" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <input type="checkbox" id="showRawTemplate" style="width: auto; margin: 0; cursor: pointer;" />
+          <label for="showRawTemplate"
+            style="display: inline; margin-bottom: 0; cursor: pointer; font-weight: normal; font-size: 0.95rem;">Show
+            template without values</label>
+        </div>
+
         <div class="btn-container">
           <button id="compileBtn">Compile Dataset</button>
         </div>
@@ -398,9 +405,9 @@
       if (!path) return obj;
       return path.split(".").reduce((acc, part) => {
         if (acc === undefined || acc === null) return acc;
-        if (part in acc) return acc[part];
+        if (typeof acc === "object" && part in acc) return acc[part];
         if (Array.isArray(acc) && acc.length === 1 && acc[0]) {
-          if (part in acc[0]) {
+          if (typeof acc[0] === "object" && part in acc[0]) {
             return acc[0][part];
           }
         }
@@ -412,32 +419,45 @@
      * Engine Core: Recursively evaluates DOM fragments for text replacement strings
      * and repeating structural loop attributes.
      */
-    function processTemplateNode(node, contextData) {
+    function processTemplateNode(node, contextData, rootData, loopIndex, showRawTemplate) {
+      // Set rootData on the first invocation if not provided
+      if (rootData === undefined) {
+        rootData = contextData;
+      }
+
       // Handle array looping structures via custom "data-loop" targeting rules
       if (node.hasAttribute && node.hasAttribute("data-loop")) {
         const loopKey = node.getAttribute("data-loop");
-        const loopData = getValueByPath(contextData, loopKey);
+        let loopData = showRawTemplate ? [{}] : getValueByPath(contextData, loopKey);
         node.removeAttribute("data-loop"); // Clear template markers out of output
 
         if (Array.isArray(loopData)) {
           const parent = node.parentNode;
 
-          loopData.forEach((itemContext) => {
+          loopData.forEach((itemContext, index) => {
             const clonedChild = node.cloneNode(true);
             // Deeply process child nodes using the scoped loop item data context
-            processTemplateNode(clonedChild, itemContext);
+            processTemplateNode(clonedChild, itemContext, rootData, index, showRawTemplate);
 
             parent.insertBefore(clonedChild, node);
           });
 
           // Clear baseline placeholder layout graphic node template element
           parent.removeChild(node);
+        } else {
+          // Loop data is missing or not an array, remove the template node
+          if (node.parentNode) {
+            node.parentNode.removeChild(node);
+          }
         }
         return;
       }
 
       // Handle raw standard scalar text node replacements
       if (node.nodeType === Node.TEXT_NODE) {
+        if (showRawTemplate) {
+          return;
+        }
         node.nodeValue = node.nodeValue.replace(
           /\{\{\s*(.+?)\s*\}\}/g,
           (match, rawExpression) => {
@@ -445,7 +465,29 @@
             const expressionPath = parts[0];
             const filterName = parts[1];
 
-            let resolvedValue = getValueByPath(contextData, expressionPath);
+            let resolvedValue;
+
+            // Check if the expression is/contains $index
+            if (loopIndex !== undefined && loopIndex !== null && expressionPath.includes("$index")) {
+              const expr = expressionPath.replace(/\$index/g, loopIndex);
+              try {
+                resolvedValue = Function(`"use strict"; return (${expr})`)();
+              } catch (e) {
+                resolvedValue = expr;
+              }
+            } else {
+              resolvedValue = getValueByPath(contextData, expressionPath);
+              // Fall back to rootData if undefined in local context
+              if (resolvedValue === undefined && rootData !== undefined) {
+                resolvedValue = getValueByPath(rootData, expressionPath);
+              }
+            }
+
+            // If the resolved value is an object with a 'value' property, extract it
+            if (resolvedValue && typeof resolvedValue === "object" && "value" in resolvedValue) {
+              resolvedValue = resolvedValue.value;
+            }
+
             if (resolvedValue !== undefined && resolvedValue !== null && resolvedValue !== "") {
               if (filterName === "numberToWords") {
                 resolvedValue = numberToWords(resolvedValue);
@@ -462,7 +504,7 @@
         // Convert to snapshot array to preserve indexing loop orders safely during clone structural updates
         const childrenArray = Array.from(node.childNodes);
         childrenArray.forEach((childNode) =>
-          processTemplateNode(childNode, contextData),
+          processTemplateNode(childNode, contextData, rootData, loopIndex, showRawTemplate),
         );
       }
     }
@@ -471,20 +513,24 @@
      * Master Orchestrator: Combines input strings, parses them into temporary DOM trees,
      * processes loops/tokens dynamically, and outputs a complete, clean string.
      */
-    function compileGeneric(htmlString, rawData) {
-      let parsedData =
-        typeof rawData === "string" ? JSON.parse(rawData) : rawData;
+    function compileGeneric(htmlString, rawData, showRawTemplate) {
+      let parsedData;
+      if (showRawTemplate) {
+        parsedData = {};
+      } else {
+        parsedData = typeof rawData === "string" ? JSON.parse(rawData) : rawData;
 
-      // Generic dataset normalization:
-      // Merge properties of single-item object array wrappers at the root level.
-      if (parsedData && typeof parsedData === "object" && !Array.isArray(parsedData)) {
-        const normalized = {};
-        for (const [key, value] of Object.entries(parsedData)) {
-          if (Array.isArray(value) && value.length === 1 && value[0] && typeof value[0] === 'object' && !Array.isArray(value[0])) {
-            Object.assign(normalized, value[0]);
+        // Generic dataset normalization:
+        // Merge properties of single-item object array wrappers at the root level.
+        if (parsedData && typeof parsedData === "object" && !Array.isArray(parsedData)) {
+          const normalized = {};
+          for (const [key, value] of Object.entries(parsedData)) {
+            if (Array.isArray(value) && value.length === 1 && value[0] && typeof value[0] === 'object' && !Array.isArray(value[0])) {
+              Object.assign(normalized, value[0]);
+            }
           }
+          parsedData = Object.assign({}, parsedData, normalized);
         }
-        parsedData = Object.assign({}, parsedData, normalized);
       }
 
       const parser = new DOMParser();
@@ -493,7 +539,7 @@
       // Check if root data context layer is delivered encapsulated as an array wrapper list
       if (Array.isArray(parsedData)) {
         if (parsedData.length > 0 && documentDOM.head) {
-          processTemplateNode(documentDOM.head, parsedData[0]);
+          processTemplateNode(documentDOM.head, parsedData[0], parsedData, undefined, showRawTemplate);
         }
 
         // Find the wrapper container element inside the HTML template
@@ -509,12 +555,12 @@
           initialChildren.forEach((blueprintNode) => {
             const liveWorkingClone = blueprintNode.cloneNode(true);
             container.appendChild(liveWorkingClone);
-            processTemplateNode(liveWorkingClone, dataEntry);
+            processTemplateNode(liveWorkingClone, dataEntry, parsedData, undefined, showRawTemplate);
           });
         });
       } else {
         // Run single structural pass map execution against root object context framework
-        processTemplateNode(documentDOM.documentElement, parsedData);
+        processTemplateNode(documentDOM.documentElement, parsedData, parsedData, undefined, showRawTemplate);
       }
 
       return "<!DOCTYPE html>\n" + documentDOM.documentElement.outerHTML;
@@ -543,6 +589,7 @@
     const uiElements = {
       template: document.getElementById("templateFile"),
       data: document.getElementById("dataFile"),
+      showRawTemplate: document.getElementById("showRawTemplate"),
       compile: document.getElementById("compileBtn"),
       download: document.getElementById("downloadBtn"),
       print: document.getElementById("printBtn"),
@@ -592,20 +639,27 @@
 
     window.addEventListener("DOMContentLoaded", loadDefaults);
 
+    if (uiElements.showRawTemplate) {
+      uiElements.showRawTemplate.addEventListener("change", () => {
+        uiElements.compile.click();
+      });
+    }
+
     uiElements.compile.addEventListener("click", async () => {
       const templateFile = uiElements.template.files[0];
       const dataFile = uiElements.data.files[0];
+      const showRawTemplate = uiElements.showRawTemplate ? uiElements.showRawTemplate.checked : false;
 
       if (!templateFile && !defaultTemplateContent) {
         displayStatusText(
-          "Error: Both a source HTML layout blueprint and valid JSON dataset are required.",
+          "Error: A source HTML layout blueprint is required.",
           "error",
         );
         return;
       }
-      if (!dataFile && !defaultDataContent) {
+      if (!showRawTemplate && !dataFile && !defaultDataContent) {
         displayStatusText(
-          "Error: Both a source HTML layout blueprint and valid JSON dataset are required.",
+          "Error: A JSON dataset is required unless 'Show template without values' is selected.",
           "error",
         );
         return;
@@ -631,6 +685,7 @@
         finalOutputStringMemoryBuffer = compileGeneric(
           templateMarkupString,
           dataPayloadString,
+          showRawTemplate,
         );
 
         displayStatusText(

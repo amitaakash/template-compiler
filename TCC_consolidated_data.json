@@ -7,10 +7,89 @@
 				"endPage": "80",
 				"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
 			},
-			"essentialQualificationCriteria": {
-				"value": "# Essential Qualifying Criteria\\1. The bidder should possess the experience of having successfully completed or substantially completed similar works during the last 7-years (ending last day of the month previous to the one in which tenders are invited) which should be anyone of the following:-\\(i) Three similar works each costing not less than the amount equal to 30% of the estimated cost.\\OR\\(ii) Two similar works each costing not less than the amount equal to 40% of the estimated cost.\\OR\\(iii) One similar work costing not less than the amount equal to 60% of the estimated cost.\\**Similar Work:** Any Civil Engineering works involving Earthwork in Embankment/Cutting and construction of Bridges in Railway/Metro/Highway/Expressway projects.\\2. The average annual financial turnover during the last 3-years should be at least 30% of the estimated cost.\\**Notes:**\b) The financial turnover shall mean Revenue from Operations of standalone Financial Statements of the Bidder.\\c) In case the financials of immediate prior Financial Year have not yet been audited till the time of submission of the tender, the bidder can submit an Affidavit to this effect stating that 'the financial results of the immediate prior Financial Year has actually not been audited so far'. In such cases, the financials of preceding three audited financial years will be taken into consideration for evaluating the Annual Financial Turnover of the bidder. In the absence of such an Affidavit, the benefit of considering three preceding years would not be given and the bid would be evaluated considering turnover for two preceding years only.\\3. Net worth of the bidder should be at least 10% of the estimated cost of the work. This will be judged from the audited Balance Sheet of the last financial year ending on a date not prior to 18 months from the date of invitation of the tender, but not earlier than a year immediate financial year.\\3.1 The bidder whose annual financial turnover do not exceed Rs 50 Lakhs should submit copy of applicable ITR under Income tax rules which is generated from Income tax portal and duly self- attested to judge their net worth and turnover.\\4. The bidder should submit completion certificates in reference to S.No.1 (minimum 3 nos., 2 nos. or 1 no. as the case may be) above issued by Government Organizations/ Semi Government Organizations/ Public Sector Undertakings/ Autonomous bodies/ Municipal bodies/ Public Limited Company / Concessionaire Company/ Private Company/ JV Company for having successfully completed similar works in the last 7 years. Certificates issued by such Public Limited Company / Concessionaire Company /Private Company/ JV Company must be supported by Tax Deducted at Source (TDS) Certificates (Form 16A/ 26AS) in evidence of the value of work executed. In case of supply contracts, Copies of GSTR-1/GSTR 3B to be submitted by the bidder as a proof of payment received for supply. Before implementation of GST where no TDS is deducted, relevant copies of purchase order and invoices along with bill wise details of payment received duly certified by Chartered Accountant should be submitted by the bidder in support of value of work executed.\\4.1 It shall be mandatorily incumbent upon the tenderer to identify, state and submit the supporting documents duly self-attested by which they/he is qualifying the Qualifying Criteria mentioned in the Tender Document.\\**NOTE:-**\\i) Value/ Quantity of Key Construction activities of a successfully completed work done by a member in an earlier JV shall be reckoned only to the extent of the concerned member's share in that JV for the purpose of satisfying his/her compliance to the above-mentioned technical eligibility criteria in the tender. A copy of the JV agreement submitted to client at the time of award of work or any subsequent change in the provision of original JV agreement as agreed by the client shall be submitted along with tender document, while claiming share of the experience in the previous JV.\\ii) Credentials if submitted in foreign currency shall be converted into Indian currency i.e., Indian Rupee as under: first be converted to US Dollars as on 1st day (i.e. 1st April) of the relevant year (financial year) in which work was completed and the amount so derived in US Dollars shall be converted into Rupees at the aforesaid rate. The conversion rate of such currencies shall be the daily representative exchange rates published by the International Monetary Fund for the relevant date.\\5. Bid Capacity – Deleted\\6. The bidder shall sign the Affidavit as enclosed in Annexure-'IV' of 'Instructions to Tenderers'. This Affidavit shall be signed by all the partners of Partnership firm and all the members of Joint Venture (JV)/ MOU (if participation of JV/ MOU is permitted in the tender).\\7. If the bidder (any partners of JV, in case JV is permitted in the tender) is in Corporate Insolvency Resolution Process (CIRP)/ liquidation/ Winding up/ CDR/SDR/S4A/Flexible Structuring or any other restructuring scheme due to financial stress and is in default on any debt obligations on the bid due date. An undertaking of bidder (All partners of JV in case JV is permitted in the tender) (duly certified by the statutory auditor of the bidder with UDIN where the accounts are audited. In other cases the same may be certified by Charted Accounted with UDIN) must be submitted along with the bid.",
+			"essentialQualificationCriteria": [
+				{
+					"pointNumber": "1",
+					"value": "The bidder should possess the experience of having successfully completed or substantially completed similar works during the last 7-years (ending last day of the month previous to the one in which tenders are invited) which should be anyone of the following:-(i)(ii)(iii)One similar work costing not less than the amount equal to 60% of the estimated cost.",
+					"startPage": "44",
+					"endPage": "44",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "2",
+					"value": "The average annual financial turnover during the last 3-years should be at least 30% of the estimated cost.Notes:a)The financial turnover shall mean Revenue from Operations of standalone Financial Statements of the Bidder. b)The financial turnover shall mean Revenue from Operations of standalone Financial Statements of the Bidder.c) In case the financials of immediate prior Financial Year have not yet been audited till the time of submission of the tender, the bidder can submit an Affidavit to this effect stating that 'the financial results of the immediate prior Financial Year has actually not been audited so far'. In such cases, the financials of preceding three audited financial years will be taken into consideration for evaluating the Annual Financial Turnover of the bidder. In the absence of such an Affidavit, the benefit of considering three preceding years would not be given and the bid would be evaluated considering turnover for two preceding years only.",
+					"startPage": "44",
+					"endPage": "44",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "3",
+					"value": "Net worth of the bidder should be at least 10% of the estimated cost of the work. This will be judged from the audited Balance Sheet of the last financial year ending on a date not prior to 18 months from the date of invitation of the tender, but not earlier than a year immediate financial year.",
+					"startPage": "45",
+					"endPage": "45",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "3.1",
+					"value": "The bidder whose annual financial turnover do not exceed Rs 50 Lakhs should submit copy of applicable ITR under Income tax rules which is generated from Income tax portal and duly self- attested to judge their net worth and turnover.",
+					"startPage": "45",
+					"endPage": "45",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "4",
+					"value": "The bidder should submit completion certificates in reference to S.No.1 (minimum 3 nos., 2 nos. or 1 no. as the case may be) above issued by Government Organizations/ Semi Government Organizations/ Public Sector Undertakings/ Autonomous bodies/ Municipal bodies/ Public Limited Company / Concessionaire Company/ Private Company/ JV Company for having successfully completed similar works in the last 7 years. Certificates issued by such Public Limited Company / Concessionaire Company /Private Company/ JV Company must be supported by Tax Deducted at Source (TDS) Certificates (Form 16A/ 26AS) in evidence of the value of work executed. In case of supply contracts, Copies of GSTR-1/GSTR 3B to be submitted by the bidder as a proof of payment received for supply. Before implementation of GST where no TDS is deducted, relevant copies of purchase order and invoices along with bill wise details of payment received duly certified by Chartered Accountant should be submitted by the bidder in support of value of work executed.",
+					"startPage": "45",
+					"endPage": "45",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "4.1",
+					"value": "It shall be mandatorily incumbent upon the tenderer to identify, state and submit the supporting documents duly self-attested by which they/he is qualifying the Qualifying Criteria mentioned in the Tender Document.",
+					"startPage": "45",
+					"endPage": "45",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "NOTE:-",
+					"value": "i)Value/ Quantity of Key Construction activities of a successfully completed work done by a member in an earlier JV shall be reckoned only to the extent of the concerned member's share in that JV for the purpose of satisfying his/her compliance to the above-mentioned technical eligibility criteria in the tender. A copy of the JV agreement submitted to client at the time of award of work or any subsequent change in the provision of original JV agreement as agreed by the client shall be submitted along with tender document, while claiming share of the experience in the previous JV. ii) Credentials if submitted in foreign currency shall be converted into Indian currency i.e., Indian Rupee as under: The conversion rate of US Dollars into Rupees shall be the daily representative exchange rates published by the Reserve Bank of India/ Financial Benchmarks India Pvt. Ltd. for the relevant date. Where, relevant date shall be 1st day (i.e. 1st April) of the relevant year (financial year) in which work was completed. In case of any other currency, the same shall first be converted to US Dollars as on1st day (i.e. 1st April) of the relevant year (financial year) in which work was completed and the amount so derived in US Dollars shall be converted into Rupees at the aforesaid rate. The conversion rate of such currencies shall be the daily representative exchange rates published by the International Monetary Fund for the relevant date.",
+					"startPage": "45",
+					"endPage": "45",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "5",
+					"value": "Bid Capacity – Deleted",
+					"startPage": "46",
+					"endPage": "46",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "6",
+					"value": "The bidder shall sign the Affidavit as enclosed in Annexure-'IV' of 'Instructions to Tenderers'. This Affidavit shall be signed by all the partners of Partnership firm and all the members of Joint Venture (JV)/ MOU (if participation of JV/ MOU is permitted in the tender).",
+					"startPage": "46",
+					"endPage": "46",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "7",
+					"value": "If the bidder (any partners of JV, in case JV is permitted in the tender) is in Corporate Insolvency Resolution Process (CIRP)/ liquidation/ Winding up/ CDR/SDR/S4A/Flexible Structuring or any other restructuring scheme due to financial stress and is in default on any debt obligations on the bid due date. An undertaking of bidder (All partners of JV in case JV is permitted in the tender) (duly certified by the statutory auditor of the bidder with UDIN where the accounts are audited. In other cases the same may be certified by Charted Accounted with UDIN) must be submitted along with the bid.",
+					"startPage": "46",
+					"endPage": "46",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				},
+				{
+					"pointNumber": "Explanation",
+					"value": "[Explanation for above Essential Qualifying Criteria No. 1 to 7:Substantially Completed Work means an ongoing work in which payment equal to or more than 90% of the present contract value (excluding the payment made for adjustment of Price variation (PVC), if any) has been made to the contractor in that ongoing contract and no proceedings of termination of contract on Contractor's default has been initiated. The credential certificate in this regard should have been issued not prior to 60 days of date of invitation of present tender.In case of substantially completed work, the total gross amount already paid including the PVC amount (if paid), as mentioned in the certificate, shall be considered as the cost of substantially completed work.If a provisional completion certificate is issued by the concerned organization, such work shall be considered for fulfillment of credentials. However, the value of work done shall be considered to the extent of actual amount paid by the client.In case a work is considered similar in nature for fulfillment of technical credentials, the overall cost of that work including Price Variation amount if any shall be considered and no separate evaluation for each component of that work shall be made to decide eligibility.In case of newly formed partnership firm, the credentials of individual partners from previous propriety firm(s) or dissolved previous partnership firm(s) or split previous partnership firm(s), shall be considered only to the extent of their share in previous entity on the date of dissolution / split and their share in newly formed partnership firm. For example, a partner A had 30% share in previous entity and his share in present partnership firm is 20%. In the present tender under consideration, the credentials of partner A will be considered to the extent of 0.3*0.2* value of the work done in the previous entity. For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deed(s), dissolution deed(s) and proof of surrender of PAN No.(s) in case of dissolution of partnership firm(s) etc.In case of existing partnership firm, if any one or more partners quit the partnership firm, the credentials of remaining partnership firm shall be re-worked out i.e., the quitting partner(s) shall take away his credentials to the extent of his share on the date of quitting the partnership firm(e.g. in a partnership firm of partners A, B & C having share 30%, 30% & 40% respectively and credentials of Rs 10 crore; in case partner C quits the firm, the credentials of this partnership firm shall remain as Rs 6crore). For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deed(s), dissolution deed(s) and proof of surrender of PAN No.(s) in case of dissolution of partnership firm(s) etc.In case of existing partnership firm if any new partner(s) joins the firm without any modification in the name and PAN/TAN no. of the firm, the credentials of partnership firm shall get enhanced to the extent of credentials of newly added partner(s) on the same principles as mentioned in item 6 above. For this purpose, the tenderer shall submit along with his bid all the relevant documents which include copy of previous partnership deeds, dissolution/splitting deeds and proof of surrender of PAN No.(s) in case of dissolution of partnership firm etc.In case a tenderer is LLP, the credentials of tenderer shall be worked out on above lines similar to a partnership firm.",
+					"startPage": "46",
+					"endPage": "48",
+					"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
+				}
+			],
+			"EQCDefinition": {
+				"value": "Any Civil Engineering works involving Earthwork in Embankment/Cutting and construction of Bridges in Railway/Metro/Highway/Expressway projects.",
 				"startPage": "44",
-				"endPage": "46",
+				"endPage": "44",
 				"fileUri": "gs://data_extraction_gcp/upload/VZVSTFNJIVLT_1928946757_chunks/cgrp RFP_1.pdf"
 			},
 			"itt_clause_docs": {
@@ -634,6 +713,886 @@
 							"endPage": "76",
 							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
 						}
+					},
+					{
+						"bidderNameTenderCostEMD": {
+							"value": "R.R. Constructions",
+							"startPage": "1",
+							"endPage": "1",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"tenderCostPaymentDetails": {
+							"value": "NEFT, Transaction Reference Number: BARBV24057980217, Transaction Date: 26-Feb-2024, Amount Paid: ₹50,000, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch",
+							"startPage": "1",
+							"endPage": "1",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"EMDPaymentDetails": {
+							"value": "RTGS, Transaction Reference Number: BARBR52024022600910396, Transaction Date: 26-Feb-2024, Amount Paid: ₹77,94,183, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch",
+							"startPage": "5",
+							"endPage": "5",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"dateOfCertificateOfIncorporation": {
+							"value": "25.09.1996",
+							"startPage": "1",
+							"endPage": "1",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"COIPageReferenceFolioNumber": {
+							"value": "",
+							"startPage": "",
+							"endPage": "",
+							"fileUri": ""
+						},
+						"MoAPageReferenceFolioNumber": {
+							"value": "",
+							"startPage": "",
+							"endPage": "",
+							"fileUri": ""
+						},
+						"POABidderName": {
+							"value": "R.R. Constructions",
+							"startPage": "38",
+							"endPage": "38",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_81_160.pdf"
+						},
+						"POAHolderName": {
+							"value": "Nuka Venkata Ramana Reddy",
+							"startPage": "38",
+							"endPage": "38",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_81_160.pdf"
+						},
+						"POAAuthorizationAction": {
+							"value": "Sign and submit all pre-qualification tenders / tender documents and agreements and execute all the contracts obtained in the name of the FIRM",
+							"startPage": "38",
+							"endPage": "39",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_81_160.pdf"
+						},
+						"POAPageReferenceFolioNumber": {
+							"value": "",
+							"startPage": "",
+							"endPage": "",
+							"fileUri": ""
+						},
+						"yearsOfSimilarWorkExperiencePermitted": {
+							"value": "7 years",
+							"startPage": "3",
+							"endPage": "3",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"workCertificateRecipient": {
+							"value": "R.R. Constructions",
+							"startPage": "20",
+							"endPage": "20",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"workStartDate": {
+							"value": "09.08.2016",
+							"startPage": "20",
+							"endPage": "20",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"nameOfWork": {
+							"value": "Package-3 Construction of Roadbed, Major and Minor Bridges, Track Linking (Excluding supply of Rails and PSC Line sleepers), General Electrical, Traction and Signal & Telecommunication works (Outdoor) and connection of staff quarters in connection with Doubling with Railway Electrification of Bhimavaram Nidadavole Section (incl. Bhimavaram Jn. Bhimavaram Town and Nidadavole Jn) From Km. 105.00 to Km. 154.75 on Vijayawada division of South Central Railway",
+							"startPage": "20",
+							"endPage": "20",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"similarWorkExperience": [
+							{
+								"certificateNumber": {
+									"value": "RVNL/BZA/RZA-GDV-BVRM-NDD/Pkg-3",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"certificateDate": {
+									"value": "27.06.2022",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"projectName": {
+									"value": "Package-3 Construction of Roadbed, Major and Minor Bridges, Track Linking (Excluding supply of Rails and PSC Line sleepers), General Electrical, Traction and Signal & Telecommunication works (Outdoor) and connection of staff quarters in connection with Doubling with Railway Electrification of Bhimavaram Nidadavole Section (incl. Bhimavaram Jn. Bhimavaram Town and Nidadavole Jn) From Km. 105.00 to Km. 154.75 on Vijayawada division of South Central Railway",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuingAgency": {
+									"value": "Rail Vikas Nigam Limited",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuedTo": {
+									"value": "R.R. Constructions",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"valueOfContract": {
+									"value": "Rs: 393,60,44,223.19/-",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"workDoneCost": {
+									"value": "Rs.146,65.54,245/-",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCommencement": {
+									"value": "09.08.2016",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCompletion": {
+									"value": "18-06-2022",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"completionMonthYear": {
+									"value": "June 2022",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								}
+							},
+							{
+								"certificateNumber": {
+									"value": "RVNL/SC/KRV-KCC/Stone Columns/BPP-APL/SLT /2020-21/Agt/005",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"certificateDate": {
+									"value": "09.11.2021",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"projectName": {
+									"value": "Ground improvement of bad formation location between Bapatla-Appikatla stations (Km 359/8 to 363/10) of Vijayawada-Gudur Section by construction of stone columns including supply of stone materials for the proposed 3rd line in Vijayawada Division.",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuingAgency": {
+									"value": "Rail Vikas Nigam Limited (RVNL)",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuedTo": {
+									"value": "R.R. Constructions",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"valueOfContract": {
+									"value": "Rs. 68,20,82,798.18",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"workDoneCost": {
+									"value": "Rs. 88,58,08,237.16",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCommencement": {
+									"value": "28.09.2020",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCompletion": {
+									"value": "14.10.2021",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"completionMonthYear": {
+									"value": "October 2021",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								}
+							},
+							{
+								"certificateNumber": {
+									"value": "RVNL/BZA/BVRM-NS/Additional works/SLT/006",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"certificateDate": {
+									"value": "06.09.2019",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"projectName": {
+									"value": "Additional Works between Bhimavaram - Narsapur in connection with doubling of Bhimavaram - Narsapur section on Vijayawada division of South Central Railway in Andhra Pradesh State, India",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuingAgency": {
+									"value": "Rail Vikas Nigam Limited (RVNL)",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuedTo": {
+									"value": "R.R. Constructions",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"valueOfContract": {
+									"value": "Rs. 23,35,52,968.93",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"workDoneCost": {
+									"value": "Rs. 59,54,74,998.59",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCommencement": {
+									"value": "16.08.2019",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCompletion": {
+									"value": "10.03.2021",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"completionMonthYear": {
+									"value": "March 2021",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								}
+							},
+							{
+								"certificateNumber": {
+									"value": "CAO/CN/BNC/74100/A/719/VI/16",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"certificateDate": {
+									"value": "07.08.2023",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"projectName": {
+									"value": "Ginigera - Raichur New BG line: Earthwork including blanketing and construction of minor bridges from between Km.45.10 50.000 to Gangavathi and Sriram Nagar stations.",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuingAgency": {
+									"value": "South Western Railway",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuedTo": {
+									"value": "R.R. Constructions",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"valueOfContract": {
+									"value": "Rs. 34,46,30,110.00",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"workDoneCost": {
+									"value": "Rs. 45,41,35,728.00",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCommencement": {
+									"value": "03.03.2016",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCompletion": {
+									"value": "30.12.2019",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"completionMonthYear": {
+									"value": "December 2019",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								}
+							}
+						],
+						"averageAnnualFinancialTurnoverDetails": [
+							{
+								"financialYear": {
+									"value": "2020-21",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"turnoverAmount": {
+									"value": "Rs. 152.27 Cr.",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"folioDetailsOfBidderFile": {
+									"value": "",
+									"startPage": "",
+									"endPage": "",
+									"fileUri": ""
+								}
+							},
+							{
+								"financialYear": {
+									"value": "2021-22",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"turnoverAmount": {
+									"value": "Rs. 165.14 Cr.",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"folioDetailsOfBidderFile": {
+									"value": "",
+									"startPage": "",
+									"endPage": "",
+									"fileUri": ""
+								}
+							},
+							{
+								"financialYear": {
+									"value": "2022-23",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"turnoverAmount": {
+									"value": "Rs. 54.23 Cr.",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"folioDetailsOfBidderFile": {
+									"value": "",
+									"startPage": "",
+									"endPage": "",
+									"fileUri": ""
+								}
+							}
+						],
+						"averageAnnualTurnover": {
+							"value": "Rs. 123.88 Cr.",
+							"startPage": "44",
+							"endPage": "44",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"turnoverFulfillmentParagraph": {
+							"value": "The bidder's average annual financial turnover for the last three audited financial years (2020-21, 2021-22, and 2022-23) is ₹1,23,88,08,431. This is significantly higher than the required threshold of ₹43,16,50,959.24, which represents 30% of the total estimated cost of ₹1,43,88,36,530.81. The annual turnovers reported are ₹152,26,91,970 for FY 2020-21, ₹165,14,16,745 for FY 2021-22, and ₹54,23,16,579 for FY 2022-23.",
+							"startPage": "44",
+							"endPage": "44",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"netWorthParagraph": {
+							"value": "Yes, the bidder satisfies the net worth requirement. The bidder, RR CONSTRUCTIONS, is identified as a Partnership Firm. For the financial year 2022-23, the Net Worth is recomputed based on the audited Balance Sheet components: Partner's Capital (N Venkata Ramana Reddy: ₹13,16,17,716 and N Sasi Kala: ₹4,74,23,001), totaling ₹17,90,40,717. The required threshold is 10% of the estimated cost (₹1,438,836,530.81), which equals ₹14,38,83,653.08. The recomputed Net Worth of ₹17,90,40,717 is higher than the threshold. The Balance Sheet date of 31st March 2023 is within 18 months of the tender invitation date (07.02.2024) and is the immediate previous financial year.",
+							"startPage": "45",
+							"endPage": "45",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"affidavitParagraph": {
+							"value": "The bidder, R.R. Constructions, has submitted the required affidavit as per the format given in Annexure-IV. In the submitted affidavit, specifically under section 8 (Certification on submitted/ Attached Documents/ Credentials), the bidder declares that the facts stated and documents enclosed in the bid are true and correct, and they have not concealed or suppressed any facts or misrepresented any records. Furthermore, the bidder explicitly states in clause 8.4 and clause 12 that the information and documents submitted along with the tender are correct and they are fully responsible for their correctness. The submission of this affidavit is confirmed in the bidder's forwarding letter and the checklist of documents provided in the technical bid.",
+							"startPage": "2",
+							"endPage": "32",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"similarWorkFulfillmentParagraph": {
+							"value": "The bidder has completed one similar work of value equal to or more than 60% of the estimated cost (The total estimated cost is ₹ 143,88,36,530.81 and Tender invitation date is 07.02.2024). The project involves construction of roadbed, bridges, and track linking for a railway doubling project, which aligns with the definition of similar work. Extracted from Experience Certificate issued by Rail Vikas Nigam Limited dated 27.06.2022. The work done value executed by the bidder (sub-contractor) up to May-2022 is Rs.146,65.54,245/- (including price variation). This exceeds 60% of the estimated cost (₹ 86,33,01,918.49).",
+							"startPage": "20",
+							"endPage": "20",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"delayedEMDSubmissionParagraph": {
+							"value": "",
+							"startPage": "",
+							"endPage": "",
+							"fileUri": ""
+						},
+						"essentialQualificationCriteriaParagraph": {
+							"value": "In view of the above deliberations, TC is of the view that R.R. Constructions fulfills the technical and financial eligibility criteria as per the Essential Qualifying Criteria (EQC) of the tender. The bidder has demonstrated completion of similar works exceeding the required thresholds, maintained an average annual turnover significantly above 30% of the estimated cost, and possesses a net worth greater than 10% of the estimated cost. All mandatory documents, including the Power of Attorney, Integrity Pact, and Affidavit, have been submitted in the prescribed formats.",
+							"startPage": "1",
+							"endPage": "76",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						}
+					},
+					{
+						"bidderNameTenderCostEMD": {
+							"value": "R.R. Constructions",
+							"startPage": "1",
+							"endPage": "1",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"tenderCostPaymentDetails": {
+							"value": "NEFT, Transaction Reference Number: BARBV24057980217, Transaction Date: 26-Feb-2024, Amount Paid: ₹50,000, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch",
+							"startPage": "1",
+							"endPage": "1",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"EMDPaymentDetails": {
+							"value": "RTGS, Transaction Reference Number: BARBR52024022600910396, Transaction Date: 26-Feb-2024, Amount Paid: ₹77,94,183, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch",
+							"startPage": "5",
+							"endPage": "5",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"dateOfCertificateOfIncorporation": {
+							"value": "25.09.1996",
+							"startPage": "1",
+							"endPage": "1",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"COIPageReferenceFolioNumber": {
+							"value": "",
+							"startPage": "",
+							"endPage": "",
+							"fileUri": ""
+						},
+						"MoAPageReferenceFolioNumber": {
+							"value": "",
+							"startPage": "",
+							"endPage": "",
+							"fileUri": ""
+						},
+						"POABidderName": {
+							"value": "R.R. Constructions",
+							"startPage": "38",
+							"endPage": "38",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_81_160.pdf"
+						},
+						"POAHolderName": {
+							"value": "Nuka Venkata Ramana Reddy",
+							"startPage": "38",
+							"endPage": "38",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_81_160.pdf"
+						},
+						"POAAuthorizationAction": {
+							"value": "Sign and submit all pre-qualification tenders / tender documents and agreements and execute all the contracts obtained in the name of the FIRM",
+							"startPage": "38",
+							"endPage": "39",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_81_160.pdf"
+						},
+						"POAPageReferenceFolioNumber": {
+							"value": "",
+							"startPage": "",
+							"endPage": "",
+							"fileUri": ""
+						},
+						"yearsOfSimilarWorkExperiencePermitted": {
+							"value": "7 years",
+							"startPage": "3",
+							"endPage": "3",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"workCertificateRecipient": {
+							"value": "R.R. Constructions",
+							"startPage": "20",
+							"endPage": "20",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"workStartDate": {
+							"value": "09.08.2016",
+							"startPage": "20",
+							"endPage": "20",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"nameOfWork": {
+							"value": "Package-3 Construction of Roadbed, Major and Minor Bridges, Track Linking (Excluding supply of Rails and PSC Line sleepers), General Electrical, Traction and Signal & Telecommunication works (Outdoor) and connection of staff quarters in connection with Doubling with Railway Electrification of Bhimavaram Nidadavole Section (incl. Bhimavaram Jn. Bhimavaram Town and Nidadavole Jn) From Km. 105.00 to Km. 154.75 on Vijayawada division of South Central Railway",
+							"startPage": "20",
+							"endPage": "20",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"similarWorkExperience": [
+							{
+								"certificateNumber": {
+									"value": "RVNL/BZA/RZA-GDV-BVRM-NDD/Pkg-3",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"certificateDate": {
+									"value": "27.06.2022",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"projectName": {
+									"value": "Package-3 Construction of Roadbed, Major and Minor Bridges, Track Linking (Excluding supply of Rails and PSC Line sleepers), General Electrical, Traction and Signal & Telecommunication works (Outdoor) and connection of staff quarters in connection with Doubling with Railway Electrification of Bhimavaram Nidadavole Section (incl. Bhimavaram Jn. Bhimavaram Town and Nidadavole Jn) From Km. 105.00 to Km. 154.75 on Vijayawada division of South Central Railway",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuingAgency": {
+									"value": "Rail Vikas Nigam Limited",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuedTo": {
+									"value": "R.R. Constructions",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"valueOfContract": {
+									"value": "Rs: 393,60,44,223.19/-",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"workDoneCost": {
+									"value": "Rs.146,65.54,245/-",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCommencement": {
+									"value": "09.08.2016",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCompletion": {
+									"value": "18-06-2022",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"completionMonthYear": {
+									"value": "June 2022",
+									"startPage": "20",
+									"endPage": "20",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								}
+							},
+							{
+								"certificateNumber": {
+									"value": "RVNL/SC/KRV-KCC/Stone Columns/BPP-APL/SLT /2020-21/Agt/005",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"certificateDate": {
+									"value": "09.11.2021",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"projectName": {
+									"value": "Ground improvement of bad formation location between Bapatla-Appikatla stations (Km 359/8 to 363/10) of Vijayawada-Gudur Section by construction of stone columns including supply of stone materials for the proposed 3rd line in Vijayawada Division.",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuingAgency": {
+									"value": "Rail Vikas Nigam Limited (RVNL)",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuedTo": {
+									"value": "R.R. Constructions",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"valueOfContract": {
+									"value": "Rs. 68,20,82,798.18",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"workDoneCost": {
+									"value": "Rs. 88,58,08,237.16",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCommencement": {
+									"value": "28.09.2020",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCompletion": {
+									"value": "14.10.2021",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"completionMonthYear": {
+									"value": "October 2021",
+									"startPage": "14",
+									"endPage": "14",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								}
+							},
+							{
+								"certificateNumber": {
+									"value": "RVNL/BZA/BVRM-NS/Additional works/SLT/006",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"certificateDate": {
+									"value": "06.09.2019",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"projectName": {
+									"value": "Additional Works between Bhimavaram - Narsapur in connection with doubling of Bhimavaram - Narsapur section on Vijayawada division of South Central Railway in Andhra Pradesh State, India",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuingAgency": {
+									"value": "Rail Vikas Nigam Limited (RVNL)",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuedTo": {
+									"value": "R.R. Constructions",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"valueOfContract": {
+									"value": "Rs. 23,35,52,968.93",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"workDoneCost": {
+									"value": "Rs. 59,54,74,998.59",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCommencement": {
+									"value": "16.08.2019",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCompletion": {
+									"value": "10.03.2021",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"completionMonthYear": {
+									"value": "March 2021",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								}
+							},
+							{
+								"certificateNumber": {
+									"value": "CAO/CN/BNC/74100/A/719/VI/16",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"certificateDate": {
+									"value": "07.08.2023",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"projectName": {
+									"value": "Ginigera - Raichur New BG line: Earthwork including blanketing and construction of minor bridges from between Km.45.10 50.000 to Gangavathi and Sriram Nagar stations.",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuingAgency": {
+									"value": "South Western Railway",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"issuedTo": {
+									"value": "R.R. Constructions",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"valueOfContract": {
+									"value": "Rs. 34,46,30,110.00",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"workDoneCost": {
+									"value": "Rs. 45,41,35,728.00",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCommencement": {
+									"value": "03.03.2016",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"dateOfCompletion": {
+									"value": "30.12.2019",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"completionMonthYear": {
+									"value": "December 2019",
+									"startPage": "29",
+									"endPage": "29",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								}
+							}
+						],
+						"averageAnnualFinancialTurnoverDetails": [
+							{
+								"financialYear": {
+									"value": "2020-21",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"turnoverAmount": {
+									"value": "Rs. 152.27 Cr.",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"folioDetailsOfBidderFile": {
+									"value": "",
+									"startPage": "",
+									"endPage": "",
+									"fileUri": ""
+								}
+							},
+							{
+								"financialYear": {
+									"value": "2021-22",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"turnoverAmount": {
+									"value": "Rs. 165.14 Cr.",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"folioDetailsOfBidderFile": {
+									"value": "",
+									"startPage": "",
+									"endPage": "",
+									"fileUri": ""
+								}
+							},
+							{
+								"financialYear": {
+									"value": "2022-23",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"turnoverAmount": {
+									"value": "Rs. 54.23 Cr.",
+									"startPage": "44",
+									"endPage": "44",
+									"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+								},
+								"folioDetailsOfBidderFile": {
+									"value": "",
+									"startPage": "",
+									"endPage": "",
+									"fileUri": ""
+								}
+							}
+						],
+						"averageAnnualTurnover": {
+							"value": "Rs. 123.88 Cr.",
+							"startPage": "44",
+							"endPage": "44",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"turnoverFulfillmentParagraph": {
+							"value": "The bidder's average annual financial turnover for the last three audited financial years (2020-21, 2021-22, and 2022-23) is ₹1,23,88,08,431. This is significantly higher than the required threshold of ₹43,16,50,959.24, which represents 30% of the total estimated cost of ₹1,43,88,36,530.81. The annual turnovers reported are ₹152,26,91,970 for FY 2020-21, ₹165,14,16,745 for FY 2021-22, and ₹54,23,16,579 for FY 2022-23.",
+							"startPage": "44",
+							"endPage": "44",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"netWorthParagraph": {
+							"value": "Yes, the bidder satisfies the net worth requirement. The bidder, RR CONSTRUCTIONS, is identified as a Partnership Firm. For the financial year 2022-23, the Net Worth is recomputed based on the audited Balance Sheet components: Partner's Capital (N Venkata Ramana Reddy: ₹13,16,17,716 and N Sasi Kala: ₹4,74,23,001), totaling ₹17,90,40,717. The required threshold is 10% of the estimated cost (₹1,438,836,530.81), which equals ₹14,38,83,653.08. The recomputed Net Worth of ₹17,90,40,717 is higher than the threshold. The Balance Sheet date of 31st March 2023 is within 18 months of the tender invitation date (07.02.2024) and is the immediate previous financial year.",
+							"startPage": "45",
+							"endPage": "45",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"affidavitParagraph": {
+							"value": "The bidder, R.R. Constructions, has submitted the required affidavit as per the format given in Annexure-IV. In the submitted affidavit, specifically under section 8 (Certification on submitted/ Attached Documents/ Credentials), the bidder declares that the facts stated and documents enclosed in the bid are true and correct, and they have not concealed or suppressed any facts or misrepresented any records. Furthermore, the bidder explicitly states in clause 8.4 and clause 12 that the information and documents submitted along with the tender are correct and they are fully responsible for their correctness. The submission of this affidavit is confirmed in the bidder's forwarding letter and the checklist of documents provided in the technical bid.",
+							"startPage": "2",
+							"endPage": "32",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"similarWorkFulfillmentParagraph": {
+							"value": "The bidder has completed one similar work of value equal to or more than 60% of the estimated cost (The total estimated cost is ₹ 143,88,36,530.81 and Tender invitation date is 07.02.2024). The project involves construction of roadbed, bridges, and track linking for a railway doubling project, which aligns with the definition of similar work. Extracted from Experience Certificate issued by Rail Vikas Nigam Limited dated 27.06.2022. The work done value executed by the bidder (sub-contractor) up to May-2022 is Rs.146,65.54,245/- (including price variation). This exceeds 60% of the estimated cost (₹ 86,33,01,918.49).",
+							"startPage": "20",
+							"endPage": "20",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						},
+						"delayedEMDSubmissionParagraph": {
+							"value": "",
+							"startPage": "",
+							"endPage": "",
+							"fileUri": ""
+						},
+						"essentialQualificationCriteriaParagraph": {
+							"value": "In view of the above deliberations, TC is of the view that R.R. Constructions fulfills the technical and financial eligibility criteria as per the Essential Qualifying Criteria (EQC) of the tender. The bidder has demonstrated completion of similar works exceeding the required thresholds, maintained an average annual turnover significantly above 30% of the estimated cost, and possesses a net worth greater than 10% of the estimated cost. All mandatory documents, including the Power of Attorney, Integrity Pact, and Affidavit, have been submitted in the prescribed formats.",
+							"startPage": "1",
+							"endPage": "76",
+							"fileUri": "gs://1_cag/1_negative testing/rrconstructions_original/RRCONSTRUCTIONS_ORIGINAL_1_80.pdf"
+						}
 					}
 				],
 				"startPage": "",
@@ -693,6 +1652,8 @@
 				"npOfTenderFile": "NP-001"
 			}
 		],
-		"competencyAcceptance": "The bidder is qualified based on technical eligibility."
+		"competencyAcceptance": "The bidder is qualified based on technical eligibility.",
+		"FNBidderNumberStart": "FN-001",
+		"FNBidderNumberEnd": "FN-002"
 	}
 }

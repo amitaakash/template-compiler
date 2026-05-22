@@ -452,7 +452,7 @@
     <h2>
       6. ESSENTIAL QUALIFYING CRITERIA ( {{formData.tenderFileCPStartRange}} - {{formData.tenderFileCPEndRange}})
     </h2>
-    <p>{{essentialQualificationCriteria.value}}</p>
+    <p>{{EQCDefinition.value}}</p>
     <h2>7. DOCUMENTS SUBMITTED BY THE BIDDERS</h2>
     <p>
       As per clause {{itt_clause_docs.value}} of Instruction to Tenderers, the
@@ -466,36 +466,35 @@
       <table>
 
         <tr>
-          <th scope="row">1</th>
+          <td>1</td>
           <td>
             M/s {{bidderNameTenderCostEMD.value}} was incorporated on
             {{dateOfCertificateOfIncorporation.value}} under company Act 1956 (No.1 of 1956).
             The certificate of incorporation issued by Ministry of Company
             Affairs is placed at
-            FN-{{bidder_incorporation_certificate_start_page.value}} -
-            {{bidder_incorporation_certificate_end_page.value}}. Memorandum of
-            Association is placed at FN-
-            {{bidder_memorandum_of_association_start_page.value}}
-            {{bidder_memorandum_of_association_end_page.value}}.
+            {{formData.FNBidderNumberStart}} -
+            {{formData.FNBidderNumberEnd}}. Memorandum of
+            Association is placed at {{formData.FNBidderNumberStart}} -
+            {{formData.FNBidderNumberEnd}}.
           </td>
         </tr>
         <tr>
-          <th scope="row">2</th>
+          <td>2</td>
           <td>
             <strong>Power of Attorney</strong><br />
             The Authorized Signatories of M/s {{bidderNameTenderCostEMD.value}} has given a Power
             of Attorney to Mr. {{POAHolderName.value}}
             authorizing him to {{POAAuthorizationAction.value}} on
-            behalf of M/s {{bidderNameTenderCostEMD.value}}. Power of Attorney is placed at FN-
-            {{bidder_power_of_attorney_start_page.value}} -
-            {{bidder_power_of_attorney_end_page.value}}. The offer is submitted by Mr.
+            behalf of M/s {{bidderNameTenderCostEMD.value}}. Power of Attorney is placed at
+            {{formData.FNBidderNumberStart}} -
+            {{formData.FNBidderNumberEnd}}. The offer is submitted by Mr.
             {{bidder_offer_submitter.value}}. DSC is in the name of Mr.
             {{bidder_dsc_name.value}} (CP {{formData.tenderFileCPStartRange}} -
             {{formData.tenderFileCPEndRange}} in Tender File).
           </td>
         </tr>
         <tr>
-          <th scope="row">3</th>
+          <td>3</td>
           <td>
             <p>
               <strong>Evaluation of fulfillment of Essential Qualification Criteria
@@ -504,8 +503,8 @@
               M/s {{bidderNameTenderCostEMD.value}} has submitted details of similar work
               experience of having successfully completed similar works during
               the last {{yearsOfSimilarWorkExperiencePermitted.value}} years (Format-1 at
-              FN-{{similar_work_experience_start_page.value}} -
-              {{similar_work_experience_end_page.value}}). Following certificate is
+              {{formData.FNBidderNumberStart}} -
+              {{formData.FNBidderNumberEnd}}). Following certificate is
               considered for evaluation of the criteria of EQC para 1:
             </p>
             <div data-loop="similarWorkExperience">
@@ -515,8 +514,8 @@
                   <tr>
                     <th colspan="2">
                       Certificate No. {{certificateNumber.value}} dated:
-                      {{certificateDate.value}} (FN- {{certificate_no_page_start}} -
-                      {{certificate_no_page_end}})
+                      {{certificateDate.value}} ({{formData.FNBidderNumberStart}} -
+                      {{formData.FNBidderNumberEnd}})
                     </th>
                   </tr>
                 </thead>
@@ -569,10 +568,12 @@
           </td>
         </tr>
         <tr>
-          <th scope="row">4</th>
+          <td>4</td>
           <td>
             The Average Annual Financial turnover during the last 3-years (i.e.
-            {{financial_year1}}, {{financial_year2}} and {{financial_year3}})
+            {{averageAnnualFinancialTurnoverDetails.0.financialYear.value}},
+            {{averageAnnualFinancialTurnoverDetails.1.financialYear.value}} and
+            {{averageAnnualFinancialTurnoverDetails.2.financialYear.value}})
             ending 31st March of the previous financial years is calculated
             hereunder:
             <table>
@@ -582,28 +583,16 @@
                 <th>Turnover (Rs. in Cr.)</th>
                 <th>Folio details of bidder file</th>
               </tr>
-              <tr>
-                <td>1</td>
-                <td>{{financial_year1}}</td>
-                <td>{{financial_year1_turnover}}</td>
-                <td>{{financial_year1_folio_details}}</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>{{financial_year2}}</td>
-                <td>{{financial_year2_turnover}}</td>
-                <td>{{financial_year2_folio_details}}</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>{{financial_year3}}</td>
-                <td>{{financial_year3_turnover}}</td>
-                <td>{{financial_year3_folio_details}}</td>
+              <tr data-loop="averageAnnualFinancialTurnoverDetails">
+                <td>{{$index + 1}}</td>
+                <td>{{financialYear.value}}</td>
+                <td>{{turnoverAmount.value}}</td>
+                <td>{{folioDetailsOfBidderFile.value}}</td>
               </tr>
               <tr>
                 <td colspan="2">Average Annual Turnover</td>
-                <td>{{average_annual_turnover}}</td>
-                <td>{{average_annual_turnover_folio_details}}</td>
+                <td>{{averageAnnualTurnover.value}}</td>
+                <td>{{averageAnnualTurnoverFolioDetails.value}}</td>
               </tr>
             </table>
             <p>
@@ -612,7 +601,7 @@
           </td>
         </tr>
         <tr>
-          <th scope="row">5</th>
+          <td>5</td>
           <td>
             <p>
               {{netWorthParagraph.value}}
@@ -620,13 +609,13 @@
           </td>
         </tr>
         <tr>
-          <th scope="row">6</th>
+          <td>6</td>
           <td>
             <p>{{affidavitParagraph.value}}</p>
           </td>
         </tr>
         <tr>
-          <th scope="row">7</th>
+          <td>7</td>
           <td>
             <p>{{essentialQualificationCriteriaParagraph.value}} </p>
           </td>
