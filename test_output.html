@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continuous Document with Print Page Numbers</title>
+  <style>
+    /* ==========================================================================
+           1. SCREEN STYLES (Normal Web View - Single Continuous Container)
+           ========================================================================== */
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      font-size: 12px;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    /* The single container flows continuously on screen without any breaks */
+    .page {
+      background: #ffffff;
+      padding: 50px;
+      max-width: 80%;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #1a73e8;
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+
+    h2 {
+      color: #202124;
+      margin-top: 40px;
+      border-bottom: 2px solid #f0f2f5;
+      padding-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    h5 {
+      font-size: 0.8rem;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+      color: #4a4a4a;
+      text-align: justify;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1.5em;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table th {
+      background-color: #f2f2f2;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .header-title {
+      font-size: 1rem;
+      font-weight: 500;
+      background-color: #1a73e8;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      width: fit-content;
+      margin-left: 10px;
+    }
+
+    h1,
+    h4 {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ==========================================================================
+           2. PRINT STYLES (Natural A4 Flow + Dynamic Page Numbering)
+           ========================================================================== */
+    @media print {
+      @page {
+        size: A4;
+        /* We set a safe margin area for our custom page numbers */
+        margin: 20mm 20mm 20mm 20mm;
+
+        /* CSS Counter Magic: Targets the bottom-right corner of the printed page */
+        @bottom-right {
+          content: "Page " counter(page) " of " counter(pages);
+          font-family: Arial, sans-serif;
+          font-size: 10pt;
+          color: #555;
+        }
+      }
+
+      /* Reset the browser web wrappers for the printer */
+      body {
+        background-color: #fff;
+        color: #000;
+        padding: 0;
+        margin: 0;
+      }
+
+      .page {
+        background: none;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        max-width: none;
+        border-radius: 0;
+        /* Content flows naturally, browser handles splitting it into pages */
+      }
+
+      /* Clean up breaks: prevent titles from separating from paragraphs */
+      h1,
+      h2,
+      h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      /* Prevent a paragraph from being awkwardly split in half across pages */
+      p {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="header-logo">
+        <h1>IRCON INTERNATIONAL LIMITED</h1>
+      </div>
+      <div>
+        <div class="header-title">
+          <h4>Technical Bid</h4>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Minutes of tender committee meeting held on 2022-01-01 at
+      10:00 AM for evaluation of Technical Bids of tender for
+      Civil works including Earthwork for Railway formation, Blanketing work, Minor Bridges, RUBs, Station building and other service buildings, Staff Quarters, Platform Works including general electrical works between Urga (Km 0) to Ex. Dhaskamunda (Km 30) Single line including Double Track between CH-1.4 Km to CH-2.3 Km in connection with the construction of New BG Electrified Single Railway Line for Chhattisgarh East Rail Corridor Phase-Il from Urga (Km 0) to Dharamjaigarh (Km 62) via Bhaisma station, Dongaama, Dhinara, Dhaskamunda, Hati and Khadgaon in the state of Chhattisgarh over South East Central Railway.
+      <br>
+      <strong>NIT No: </strong>IRCON/2059/CGRP/e-TENDER/23-24/Urga-Dharamjaigarh/Pkg-1A (R)
+      <br>
+      <strong>Dated:</strong> 07.02.2024 (CP-001).
+    </p>
+    <h2>
+      MEMBERS OF THE TENDER COMMITTEE (NP-001 of Tender
+      File)
+    </h2>
+    <ol>
+      <li>
+        Sh. Anand Kumar, Additional General Manager (AGM)
+      </li><li>
+        Sh. Mukesh Kumar, Project Director (PD)
+      </li>
+    </ol>
+    <h2>1. PREFACE</h2>
+    <p>IRCON International Limited, on behalf of Chhattisgarh East Railway Limited, is executing the construction of a new B.G. Electrified Single Railway Line for the Chhattisgarh East Rail Corridor Phase-II. The project spans from Urga (Km 0) to Dharamjaigarh (Km 62) via Bhaisma station, Dongaama, Dhinara, Dhaskamunda, Hati, and Khadgaon in the state of Chhattisgarh over the South East Central Railway. This specific package (Package-1A) involves civil works between Urga (Km 0) to Ex. Dhaskamunda (Km 30), including earthwork for railway formation, blanketing work, minor bridges, RUBs, station buildings, service buildings, staff quarters, and platform works including general electrical works. The section also includes a double track between CH-1.4 Km to CH-2.3 Km. The project is being executed on a National Competitive Bidding basis with a stipulated completion period of 18 months from the date of issue of the Letter of Acceptance.</p>
+    <p>
+      IRCON invited online Open tenders under
+      Two Packet (Vide e-Procurement Notice No.:
+      IRCON/2059/CGRP/e-TENDER/23-24/Urga-Dharamjaigarh/Pkg-1A (R) Dated:
+      07.02.2024 for the above said work. The bidding
+      documents duly approved by the competent authority were uploaded in CPP
+      website www.etendergov.in/eprocure/app on 07.02.2024).
+    </p>
+    <p>
+      The approved tender document for subject work is kept at
+      CP-001 - CP-001
+      Tender File. The estimated cost of tender is Rs 121,93,52,991.81 (Basic Amount)
+      Crs. Approval of CA is placed at NP-001 of Tender
+      File.
+    </p>
+    <p>
+      Notification for the NIT was published in leading newspaper
+      (CP-001 -
+      CP-001 of tender file ). The e-tender was
+      scheduled to be submitted on 27.02.2024 up to
+      15:00 Hrs Hrs and opened on 28.02.2024
+      at 15:00 Hrs Hrs. The tender documents along with all
+      Annexure were uploaded on e-tender web site i.e
+      https.//www.eprocure.gov.in.
+    </p>
+    <h2>2. TENDER OPENING COMMITTEE:</h2>
+    <p>Tender opening committee nominated on CPPP portal (CP-001) were</p>
+    <ol>
+      <li>
+        Sh. Anand Kumar, Additional General Manager (AGM)
+      </li><li>
+        Sh. Mukesh Kumar, Project Director (PD)
+      </li>
+    </ol>
+    <h2>3. OPENING OF THE TENDER (TECHNICAL BID) AND BRIEFING NOTE:</h2>
+    <p>
+      The Technical Bid (Packet-I) was opened by the tender opening committee
+      as mentioned above on the scheduled date and time of opening of the
+      tender i.e. 28.02.2024 at 15:00 Hrs Hrs.
+    </p>
+    <p>
+      The Briefing note prepared by
+    </p><ol>
+      <li>
+        Sh. Anand Kumar, Additional General Manager (AGM)
+      </li><li>
+        Sh. Mukesh Kumar, Project Director (PD)
+      </li>
+    </ol>
+    jointly is placed at CP-001 -
+    CP-001 of
+    Tender file.
+    <p></p>
+    <h2>4. BRIEF DETAILS OF THE TENDER</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Item</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.</td>
+          <td>Name of the work</td>
+          <td>Civil works including Earthwork for Railway formation, Blanketing work, Minor Bridges, RUBs, Station building and other service buildings, Staff Quarters, Platform Works including general electrical works between Urga (Km 0) to Ex. Dhaskamunda (Km 30) Single line including Double Track between CH-1.4 Km to CH-2.3 Km in connection with the construction of New BG Electrified Single Railway Line for Chhattisgarh East Rail Corridor Phase-Il from Urga (Km 0) to Dharamjaigarh (Km 62) via Bhaisma station, Dongaama, Dhinara, Dhaskamunda, Hati and Khadgaon in the state of Chhattisgarh over South East Central Railway.</td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td>Tender Notice No.</td>
+          <td>IRCON/2059/CGRP/e-TENDER/23-24/Urga-Dharamjaigarh/Pkg-1A (R)</td>
+        </tr>
+        <tr>
+          <td>3.</td>
+          <td>Estimated cost</td>
+          <td>Rs. 121,93,52,991.81 (Basic Amount) + GST @18% = ₹ 143,88,36,530.81 Crs</td>
+        </tr>
+        <tr>
+          <td>4.</td>
+          <td>Name of the client</td>
+          <td>Chhattisgarh East Railway Limited</td>
+        </tr>
+        <tr>
+          <td>5.</td>
+          <td>Tender Approved by DP</td>
+          <td>The tender document was approved by the competent authority.</td>
+        </tr>
+        <tr>
+          <td>6.</td>
+          <td>Completion period</td>
+          <td>18 (Eighteen) months from the date of issue of LOA (Including Monsoon Period)</td>
+        </tr>
+        <tr>
+          <td>7.</td>
+          <td>Cost of tender document</td>
+          <td>Rs. 50,000/- (Rupees Fifty Thousand only)</td>
+        </tr>
+        <tr>
+          <td>8.</td>
+          <td>Earnest Money Deposit</td>
+          <td>Rs. 77,94,183/-</td>
+        </tr>
+        <tr>
+          <td>9.</td>
+          <td>Mode of tendering</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>10.</td>
+          <td>Details of newspaper advertisement</td>
+          <td>
+            <ul>
+              <li>
+                The Hindu - 2022-01-01 - CP-001
+              </li><li>
+                Times Of India - 2022-01-01 - CP-001
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>11.</td>
+          <td>
+            Date and time of issue of tenders/uploading of tender documents in
+            website.
+          </td>
+          <td>
+            07.02.2024 at
+            17:30 Hrs
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Details of Opening of Tender</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Item</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.</td>
+          <td>Mode of Receipt of Tender</td>
+          <td>online</td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td>Last date and time of submission of Tender</td>
+          <td>27.02.2024 at 15:00 Hrs</td>
+        </tr>
+        <tr>
+          <td>3.</td>
+          <td>Date and time of Opening of Technical Bids.</td>
+          <td>28.02.2024 at 15:00 Hrs</td>
+        </tr>
+        <tr>
+          <td>4.</td>
+          <td>Place of Opening of Tender</td>
+          <td>IRCON INTERNATIONAL LIMITED, C-4, District Centre, Saket, New Delhi-110017</td>
+        </tr>
+        <tr>
+          <td>5.</td>
+          <td>Tender opening committee</td>
+          <td>
+            <ol>
+              <li>
+                Sh. Anand Kumar, Additional General Manager (AGM)
+              </li><li>
+                Sh. Mukesh Kumar, Project Director (PD)
+              </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td>6.</td>
+          <td>
+            Number of Tender documents downloaded from the website
+            https://www.etenders.gov.in/eprocure/app./IRCON and list of
+            agencies who have submitted their offer
+          </td>
+          <td>
+            Total = 3 (
+            three ) nos. bids submitted
+            <ol>
+              <li>
+                R.R. Constructions
+              </li><li>
+                R.R. Constructions
+              </li><li>
+                R.R. Constructions
+              </li>
+            </ol>
+            <p>
+              Copy of Tender Opening Register is enclosed at
+              CP-001 - CP-001, Bank Statement at
+              CP-001 - CP-001 of Tender File.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>7.</td>
+          <td>Delayed/late offers if any</td>
+          <td>_____________</td>
+        </tr>
+        <tr>
+          <td>8.</td>
+          <td>Any Special Condition quoted by any tenderer</td>
+          <td>_____________</td>
+        </tr>
+        <tr>
+          <td>9.</td>
+          <td>Validity of Offer</td>
+          <td>90 days after the date of opening (Technical Bid) of the tender.</td>
+        </tr>
+        <tr>
+          <td>10.</td>
+          <td>Committee for preparation and vetting of briefing Note.</td>
+          <td>
+            <ol>
+              <li>
+                Sh. Anand Kumar, Additional General Manager (AGM)
+              </li><li>
+                Sh. Mukesh Kumar, Project Director (PD)
+              </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td>11.</td>
+          <td>Competency of Acceptance</td>
+          <td>The bidder is qualified based on technical eligibility.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>5. DETAILS OF TENDER COST &amp; EMD</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name of the Agency</th>
+          <th>Tender cost (Rs. 50,000)details</th>
+          <th>Details of EMD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>R.R. Constructions</td>
+          <td>NEFT, Transaction Reference Number: BARBV24057980217, Transaction Date: 26-Feb-2024, Amount Paid: ₹50,000, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch</td>
+          <td>RTGS, Transaction Reference Number: BARBR52024022600910396, Transaction Date: 26-Feb-2024, Amount Paid: ₹77,94,183, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch</td>
+        </tr><tr>
+          <td>2</td>
+          <td>R.R. Constructions</td>
+          <td>NEFT, Transaction Reference Number: BARBV24057980217, Transaction Date: 26-Feb-2024, Amount Paid: ₹50,000, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch</td>
+          <td>RTGS, Transaction Reference Number: BARBR52024022600910396, Transaction Date: 26-Feb-2024, Amount Paid: ₹77,94,183, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch</td>
+        </tr><tr>
+          <td>3</td>
+          <td>R.R. Constructions</td>
+          <td>NEFT, Transaction Reference Number: BARBV24057980217, Transaction Date: 26-Feb-2024, Amount Paid: ₹50,000, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch</td>
+          <td>RTGS, Transaction Reference Number: BARBR52024022600910396, Transaction Date: 26-Feb-2024, Amount Paid: ₹77,94,183, Account Number: 000705052131, IFSC: ICIC0000007, Branch: Connaught Place Branch</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>
+      6. ESSENTIAL QUALIFYING CRITERIA ( CP-001 - CP-001)
+    </h2>
+    <p>Any Civil Engineering works involving Earthwork in Embankment/Cutting and construction of Bridges in Railway/Metro/Highway/Expressway projects.</p>
+    <h2>7. DOCUMENTS SUBMITTED BY THE BIDDERS</h2>
+    <p>
+      As per clause 6.3 of Instruction to Tenderers, the
+      documents which were submitted by the Tenderers along with their offer
+      have been tabulated in briefing note.
+      (CP-001 - CP-001)
+    </p>
+    <h2>8. DISCUSSIONS ON THE OFFERS</h2>
+    <div>
+      <h4>R.R. Constructions</h4>
+      <table>
+
+        <tbody><tr>
+          <th scope="row">1</th>
+          <td>
+            M/s R.R. Constructions was incorporated on
+            25.09.1996 under company Act 1956 (No.1 of 1956).
+            The certificate of incorporation issued by Ministry of Company
+            Affairs is placed at
+            FN-001 -
+            FN-002. Memorandum of
+            Association is placed at FN-001 -
+            FN-002.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>
+            <strong>Power of Attorney</strong><br>
+            The Authorized Signatories of M/s R.R. Constructions has given a Power
+            of Attorney to Mr. Nuka Venkata Ramana Reddy
+            authorizing him to Sign and submit all pre-qualification tenders / tender documents and agreements and execute all the contracts obtained in the name of the FIRM on
+            behalf of M/s R.R. Constructions. Power of Attorney is placed at
+            FN-001 -
+            FN-002. The offer is submitted by Mr.
+            _____________. DSC is in the name of Mr.
+            _____________ (CP CP-001 -
+            CP-001 in Tender File).
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>
+            <p>
+              <strong>Evaluation of fulfillment of Essential Qualification Criteria
+                (EQC):</strong>
+              <br>
+              M/s R.R. Constructions has submitted details of similar work
+              experience of having successfully completed similar works during
+              the last 7 years years (Format-1 at
+              FN-001 -
+              FN-002). Following certificate is
+              considered for evaluation of the criteria of EQC para 1:
+            </p>
+            <div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/BZA/RZA-GDV-BVRM-NDD/Pkg-3 dated:
+                      27.06.2022 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Package-3 Construction of Roadbed, Major and Minor Bridges, Track Linking (Excluding supply of Rails and PSC Line sleepers), General Electrical, Traction and Signal &amp; Telecommunication works (Outdoor) and connection of staff quarters in connection with Doubling with Railway Electrification of Bhimavaram Nidadavole Section (incl. Bhimavaram Jn. Bhimavaram Town and Nidadavole Jn) From Km. 105.00 to Km. 154.75 on Vijayawada division of South Central Railway</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs: 393,60,44,223.19/-</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs.146,65.54,245/-</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>09.08.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>18-06-2022</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/SC/KRV-KCC/Stone Columns/BPP-APL/SLT /2020-21/Agt/005 dated:
+                      09.11.2021 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Ground improvement of bad formation location between Bapatla-Appikatla stations (Km 359/8 to 363/10) of Vijayawada-Gudur Section by construction of stone columns including supply of stone materials for the proposed 3rd line in Vijayawada Division.</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited (RVNL)</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 68,20,82,798.18</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 88,58,08,237.16</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>28.09.2020</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>14.10.2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/BZA/BVRM-NS/Additional works/SLT/006 dated:
+                      06.09.2019 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Additional Works between Bhimavaram - Narsapur in connection with doubling of Bhimavaram - Narsapur section on Vijayawada division of South Central Railway in Andhra Pradesh State, India</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited (RVNL)</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 23,35,52,968.93</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 59,54,74,998.59</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>16.08.2019</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>10.03.2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. CAO/CN/BNC/74100/A/719/VI/16 dated:
+                      07.08.2023 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Ginigera - Raichur New BG line: Earthwork including blanketing and construction of minor bridges from between Km.45.10 50.000 to Gangavathi and Sriram Nagar stations.</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>South Western Railway</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 34,46,30,110.00</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 45,41,35,728.00</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>03.03.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>30.12.2019</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              The bidder has completed one similar work of value equal to or more than 60% of the estimated cost (The total estimated cost is ₹ 143,88,36,530.81 and Tender invitation date is 07.02.2024). The project involves construction of roadbed, bridges, and track linking for a railway doubling project, which aligns with the definition of similar work. Extracted from Experience Certificate issued by Rail Vikas Nigam Limited dated 27.06.2022. The work done value executed by the bidder (sub-contractor) up to May-2022 is Rs.146,65.54,245/- (including price variation). This exceeds 60% of the estimated cost (₹ 86,33,01,918.49).
+            </p>
+            <p>
+              Verification of certificate has already been obtained in the
+              earlier tender for work of track linking in CEWRL Project and copy
+              of same is placed at
+              CP_____________ -
+              _____________.
+            </p>
+            <p>
+              The performance certificates submitted by the Bidder fulfils the
+              technical requirement of EQC 1.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>
+            The Average Annual Financial turnover during the last 3-years (i.e.
+            2020-21,
+            2021-22 and
+            2022-23)
+            ending 31st March of the previous financial years is calculated
+            hereunder:
+            <table>
+              <tbody><tr>
+                <th>S.No</th>
+                <th>Financial Year</th>
+                <th>Turnover (Rs. in Cr.)</th>
+                <th>Folio details of bidder file</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2020-21</td>
+                <td>Rs. 152.27 Cr.</td>
+                <td>_____________</td>
+              </tr><tr>
+                <td>2</td>
+                <td>2021-22</td>
+                <td>Rs. 165.14 Cr.</td>
+                <td>_____________</td>
+              </tr><tr>
+                <td>3</td>
+                <td>2022-23</td>
+                <td>Rs. 54.23 Cr.</td>
+                <td>_____________</td>
+              </tr>
+              <tr>
+                <td colspan="2">Average Annual Turnover</td>
+                <td>Rs. 123.88 Cr.</td>
+                <td>_____________</td>
+              </tr>
+            </tbody></table>
+            <p>
+              The bidder's average annual financial turnover for the last three audited financial years (2020-21, 2021-22, and 2022-23) is ₹1,23,88,08,431. This is significantly higher than the required threshold of ₹43,16,50,959.24, which represents 30% of the total estimated cost of ₹1,43,88,36,530.81. The annual turnovers reported are ₹152,26,91,970 for FY 2020-21, ₹165,14,16,745 for FY 2021-22, and ₹54,23,16,579 for FY 2022-23.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>
+            <p>
+              Yes, the bidder satisfies the net worth requirement. The bidder, RR CONSTRUCTIONS, is identified as a Partnership Firm. For the financial year 2022-23, the Net Worth is recomputed based on the audited Balance Sheet components: Partner's Capital (N Venkata Ramana Reddy: ₹13,16,17,716 and N Sasi Kala: ₹4,74,23,001), totaling ₹17,90,40,717. The required threshold is 10% of the estimated cost (₹1,438,836,530.81), which equals ₹14,38,83,653.08. The recomputed Net Worth of ₹17,90,40,717 is higher than the threshold. The Balance Sheet date of 31st March 2023 is within 18 months of the tender invitation date (07.02.2024) and is the immediate previous financial year.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>
+            <p>The bidder, R.R. Constructions, has submitted the required affidavit as per the format given in Annexure-IV. In the submitted affidavit, specifically under section 8 (Certification on submitted/ Attached Documents/ Credentials), the bidder declares that the facts stated and documents enclosed in the bid are true and correct, and they have not concealed or suppressed any facts or misrepresented any records. Furthermore, the bidder explicitly states in clause 8.4 and clause 12 that the information and documents submitted along with the tender are correct and they are fully responsible for their correctness. The submission of this affidavit is confirmed in the bidder's forwarding letter and the checklist of documents provided in the technical bid.</p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>
+            <p>In view of the above deliberations, TC is of the view that R.R. Constructions fulfills the technical and financial eligibility criteria as per the Essential Qualifying Criteria (EQC) of the tender. The bidder has demonstrated completion of similar works exceeding the required thresholds, maintained an average annual turnover significantly above 30% of the estimated cost, and possesses a net worth greater than 10% of the estimated cost. All mandatory documents, including the Power of Attorney, Integrity Pact, and Affidavit, have been submitted in the prescribed formats. </p>
+          </td>
+        </tr>
+      </tbody></table>
+    </div><div>
+      <h4>R.R. Constructions</h4>
+      <table>
+
+        <tbody><tr>
+          <th scope="row">1</th>
+          <td>
+            M/s R.R. Constructions was incorporated on
+            25.09.1996 under company Act 1956 (No.1 of 1956).
+            The certificate of incorporation issued by Ministry of Company
+            Affairs is placed at
+            FN-001 -
+            FN-002. Memorandum of
+            Association is placed at FN-001 -
+            FN-002.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>
+            <strong>Power of Attorney</strong><br>
+            The Authorized Signatories of M/s R.R. Constructions has given a Power
+            of Attorney to Mr. Nuka Venkata Ramana Reddy
+            authorizing him to Sign and submit all pre-qualification tenders / tender documents and agreements and execute all the contracts obtained in the name of the FIRM on
+            behalf of M/s R.R. Constructions. Power of Attorney is placed at
+            FN-001 -
+            FN-002. The offer is submitted by Mr.
+            _____________. DSC is in the name of Mr.
+            _____________ (CP CP-001 -
+            CP-001 in Tender File).
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>
+            <p>
+              <strong>Evaluation of fulfillment of Essential Qualification Criteria
+                (EQC):</strong>
+              <br>
+              M/s R.R. Constructions has submitted details of similar work
+              experience of having successfully completed similar works during
+              the last 7 years years (Format-1 at
+              FN-001 -
+              FN-002). Following certificate is
+              considered for evaluation of the criteria of EQC para 1:
+            </p>
+            <div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/BZA/RZA-GDV-BVRM-NDD/Pkg-3 dated:
+                      27.06.2022 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Package-3 Construction of Roadbed, Major and Minor Bridges, Track Linking (Excluding supply of Rails and PSC Line sleepers), General Electrical, Traction and Signal &amp; Telecommunication works (Outdoor) and connection of staff quarters in connection with Doubling with Railway Electrification of Bhimavaram Nidadavole Section (incl. Bhimavaram Jn. Bhimavaram Town and Nidadavole Jn) From Km. 105.00 to Km. 154.75 on Vijayawada division of South Central Railway</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs: 393,60,44,223.19/-</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs.146,65.54,245/-</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>09.08.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>18-06-2022</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/SC/KRV-KCC/Stone Columns/BPP-APL/SLT /2020-21/Agt/005 dated:
+                      09.11.2021 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Ground improvement of bad formation location between Bapatla-Appikatla stations (Km 359/8 to 363/10) of Vijayawada-Gudur Section by construction of stone columns including supply of stone materials for the proposed 3rd line in Vijayawada Division.</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited (RVNL)</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 68,20,82,798.18</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 88,58,08,237.16</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>28.09.2020</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>14.10.2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/BZA/BVRM-NS/Additional works/SLT/006 dated:
+                      06.09.2019 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Additional Works between Bhimavaram - Narsapur in connection with doubling of Bhimavaram - Narsapur section on Vijayawada division of South Central Railway in Andhra Pradesh State, India</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited (RVNL)</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 23,35,52,968.93</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 59,54,74,998.59</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>16.08.2019</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>10.03.2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. CAO/CN/BNC/74100/A/719/VI/16 dated:
+                      07.08.2023 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Ginigera - Raichur New BG line: Earthwork including blanketing and construction of minor bridges from between Km.45.10 50.000 to Gangavathi and Sriram Nagar stations.</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>South Western Railway</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 34,46,30,110.00</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 45,41,35,728.00</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>03.03.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>30.12.2019</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              The bidder has completed one similar work of value equal to or more than 60% of the estimated cost (The total estimated cost is ₹ 143,88,36,530.81 and Tender invitation date is 07.02.2024). The project involves construction of roadbed, bridges, and track linking for a railway doubling project, which aligns with the definition of similar work. Extracted from Experience Certificate issued by Rail Vikas Nigam Limited dated 27.06.2022. The work done value executed by the bidder (sub-contractor) up to May-2022 is Rs.146,65.54,245/- (including price variation). This exceeds 60% of the estimated cost (₹ 86,33,01,918.49).
+            </p>
+            <p>
+              Verification of certificate has already been obtained in the
+              earlier tender for work of track linking in CEWRL Project and copy
+              of same is placed at
+              CP_____________ -
+              _____________.
+            </p>
+            <p>
+              The performance certificates submitted by the Bidder fulfils the
+              technical requirement of EQC 1.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>
+            The Average Annual Financial turnover during the last 3-years (i.e.
+            2020-21,
+            2021-22 and
+            2022-23)
+            ending 31st March of the previous financial years is calculated
+            hereunder:
+            <table>
+              <tbody><tr>
+                <th>S.No</th>
+                <th>Financial Year</th>
+                <th>Turnover (Rs. in Cr.)</th>
+                <th>Folio details of bidder file</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2020-21</td>
+                <td>Rs. 152.27 Cr.</td>
+                <td>_____________</td>
+              </tr><tr>
+                <td>2</td>
+                <td>2021-22</td>
+                <td>Rs. 165.14 Cr.</td>
+                <td>_____________</td>
+              </tr><tr>
+                <td>3</td>
+                <td>2022-23</td>
+                <td>Rs. 54.23 Cr.</td>
+                <td>_____________</td>
+              </tr>
+              <tr>
+                <td colspan="2">Average Annual Turnover</td>
+                <td>Rs. 123.88 Cr.</td>
+                <td>_____________</td>
+              </tr>
+            </tbody></table>
+            <p>
+              The bidder's average annual financial turnover for the last three audited financial years (2020-21, 2021-22, and 2022-23) is ₹1,23,88,08,431. This is significantly higher than the required threshold of ₹43,16,50,959.24, which represents 30% of the total estimated cost of ₹1,43,88,36,530.81. The annual turnovers reported are ₹152,26,91,970 for FY 2020-21, ₹165,14,16,745 for FY 2021-22, and ₹54,23,16,579 for FY 2022-23.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>
+            <p>
+              Yes, the bidder satisfies the net worth requirement. The bidder, RR CONSTRUCTIONS, is identified as a Partnership Firm. For the financial year 2022-23, the Net Worth is recomputed based on the audited Balance Sheet components: Partner's Capital (N Venkata Ramana Reddy: ₹13,16,17,716 and N Sasi Kala: ₹4,74,23,001), totaling ₹17,90,40,717. The required threshold is 10% of the estimated cost (₹1,438,836,530.81), which equals ₹14,38,83,653.08. The recomputed Net Worth of ₹17,90,40,717 is higher than the threshold. The Balance Sheet date of 31st March 2023 is within 18 months of the tender invitation date (07.02.2024) and is the immediate previous financial year.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>
+            <p>The bidder, R.R. Constructions, has submitted the required affidavit as per the format given in Annexure-IV. In the submitted affidavit, specifically under section 8 (Certification on submitted/ Attached Documents/ Credentials), the bidder declares that the facts stated and documents enclosed in the bid are true and correct, and they have not concealed or suppressed any facts or misrepresented any records. Furthermore, the bidder explicitly states in clause 8.4 and clause 12 that the information and documents submitted along with the tender are correct and they are fully responsible for their correctness. The submission of this affidavit is confirmed in the bidder's forwarding letter and the checklist of documents provided in the technical bid.</p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>
+            <p>In view of the above deliberations, TC is of the view that R.R. Constructions fulfills the technical and financial eligibility criteria as per the Essential Qualifying Criteria (EQC) of the tender. The bidder has demonstrated completion of similar works exceeding the required thresholds, maintained an average annual turnover significantly above 30% of the estimated cost, and possesses a net worth greater than 10% of the estimated cost. All mandatory documents, including the Power of Attorney, Integrity Pact, and Affidavit, have been submitted in the prescribed formats. </p>
+          </td>
+        </tr>
+      </tbody></table>
+    </div><div>
+      <h4>R.R. Constructions</h4>
+      <table>
+
+        <tbody><tr>
+          <th scope="row">1</th>
+          <td>
+            M/s R.R. Constructions was incorporated on
+            25.09.1996 under company Act 1956 (No.1 of 1956).
+            The certificate of incorporation issued by Ministry of Company
+            Affairs is placed at
+            FN-001 -
+            FN-002. Memorandum of
+            Association is placed at FN-001 -
+            FN-002.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>
+            <strong>Power of Attorney</strong><br>
+            The Authorized Signatories of M/s R.R. Constructions has given a Power
+            of Attorney to Mr. Nuka Venkata Ramana Reddy
+            authorizing him to Sign and submit all pre-qualification tenders / tender documents and agreements and execute all the contracts obtained in the name of the FIRM on
+            behalf of M/s R.R. Constructions. Power of Attorney is placed at
+            FN-001 -
+            FN-002. The offer is submitted by Mr.
+            _____________. DSC is in the name of Mr.
+            _____________ (CP CP-001 -
+            CP-001 in Tender File).
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>
+            <p>
+              <strong>Evaluation of fulfillment of Essential Qualification Criteria
+                (EQC):</strong>
+              <br>
+              M/s R.R. Constructions has submitted details of similar work
+              experience of having successfully completed similar works during
+              the last 7 years years (Format-1 at
+              FN-001 -
+              FN-002). Following certificate is
+              considered for evaluation of the criteria of EQC para 1:
+            </p>
+            <div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/BZA/RZA-GDV-BVRM-NDD/Pkg-3 dated:
+                      27.06.2022 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Package-3 Construction of Roadbed, Major and Minor Bridges, Track Linking (Excluding supply of Rails and PSC Line sleepers), General Electrical, Traction and Signal &amp; Telecommunication works (Outdoor) and connection of staff quarters in connection with Doubling with Railway Electrification of Bhimavaram Nidadavole Section (incl. Bhimavaram Jn. Bhimavaram Town and Nidadavole Jn) From Km. 105.00 to Km. 154.75 on Vijayawada division of South Central Railway</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs: 393,60,44,223.19/-</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs.146,65.54,245/-</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>09.08.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>18-06-2022</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/SC/KRV-KCC/Stone Columns/BPP-APL/SLT /2020-21/Agt/005 dated:
+                      09.11.2021 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Ground improvement of bad formation location between Bapatla-Appikatla stations (Km 359/8 to 363/10) of Vijayawada-Gudur Section by construction of stone columns including supply of stone materials for the proposed 3rd line in Vijayawada Division.</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited (RVNL)</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 68,20,82,798.18</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 88,58,08,237.16</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>28.09.2020</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>14.10.2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. RVNL/BZA/BVRM-NS/Additional works/SLT/006 dated:
+                      06.09.2019 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Additional Works between Bhimavaram - Narsapur in connection with doubling of Bhimavaram - Narsapur section on Vijayawada division of South Central Railway in Andhra Pradesh State, India</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>Rail Vikas Nigam Limited (RVNL)</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 23,35,52,968.93</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 59,54,74,998.59</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>16.08.2019</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>10.03.2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      Certificate No. CAO/CN/BNC/74100/A/719/VI/16 dated:
+                      07.08.2023 (FN-001 -
+                      FN-002)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work</td>
+                    <td>Ginigera - Raichur New BG line: Earthwork including blanketing and construction of minor bridges from between Km.45.10 50.000 to Gangavathi and Sriram Nagar stations.</td>
+                  </tr>
+                  <tr>
+                    <td>Issuing Agency</td>
+                    <td>South Western Railway</td>
+                  </tr>
+                  <tr>
+                    <td>Issue to</td>
+                    <td>R.R. Constructions</td>
+                  </tr>
+                  <tr>
+                    <td>Value of Contract</td>
+                    <td>Rs. 34,46,30,110.00</td>
+                  </tr>
+                  <tr>
+                    <td>Work done cost</td>
+                    <td>Rs. 45,41,35,728.00</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Commencement</td>
+                    <td>03.03.2016</td>
+                  </tr>
+                  <tr>
+                    <td>Date of completion</td>
+                    <td>30.12.2019</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              The bidder has completed one similar work of value equal to or more than 60% of the estimated cost (The total estimated cost is ₹ 143,88,36,530.81 and Tender invitation date is 07.02.2024). The project involves construction of roadbed, bridges, and track linking for a railway doubling project, which aligns with the definition of similar work. Extracted from Experience Certificate issued by Rail Vikas Nigam Limited dated 27.06.2022. The work done value executed by the bidder (sub-contractor) up to May-2022 is Rs.146,65.54,245/- (including price variation). This exceeds 60% of the estimated cost (₹ 86,33,01,918.49).
+            </p>
+            <p>
+              Verification of certificate has already been obtained in the
+              earlier tender for work of track linking in CEWRL Project and copy
+              of same is placed at
+              CP_____________ -
+              _____________.
+            </p>
+            <p>
+              The performance certificates submitted by the Bidder fulfils the
+              technical requirement of EQC 1.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>
+            The Average Annual Financial turnover during the last 3-years (i.e.
+            2020-21,
+            2021-22 and
+            2022-23)
+            ending 31st March of the previous financial years is calculated
+            hereunder:
+            <table>
+              <tbody><tr>
+                <th>S.No</th>
+                <th>Financial Year</th>
+                <th>Turnover (Rs. in Cr.)</th>
+                <th>Folio details of bidder file</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2020-21</td>
+                <td>Rs. 152.27 Cr.</td>
+                <td>_____________</td>
+              </tr><tr>
+                <td>2</td>
+                <td>2021-22</td>
+                <td>Rs. 165.14 Cr.</td>
+                <td>_____________</td>
+              </tr><tr>
+                <td>3</td>
+                <td>2022-23</td>
+                <td>Rs. 54.23 Cr.</td>
+                <td>_____________</td>
+              </tr>
+              <tr>
+                <td colspan="2">Average Annual Turnover</td>
+                <td>Rs. 123.88 Cr.</td>
+                <td>_____________</td>
+              </tr>
+            </tbody></table>
+            <p>
+              The bidder's average annual financial turnover for the last three audited financial years (2020-21, 2021-22, and 2022-23) is ₹1,23,88,08,431. This is significantly higher than the required threshold of ₹43,16,50,959.24, which represents 30% of the total estimated cost of ₹1,43,88,36,530.81. The annual turnovers reported are ₹152,26,91,970 for FY 2020-21, ₹165,14,16,745 for FY 2021-22, and ₹54,23,16,579 for FY 2022-23.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>
+            <p>
+              Yes, the bidder satisfies the net worth requirement. The bidder, RR CONSTRUCTIONS, is identified as a Partnership Firm. For the financial year 2022-23, the Net Worth is recomputed based on the audited Balance Sheet components: Partner's Capital (N Venkata Ramana Reddy: ₹13,16,17,716 and N Sasi Kala: ₹4,74,23,001), totaling ₹17,90,40,717. The required threshold is 10% of the estimated cost (₹1,438,836,530.81), which equals ₹14,38,83,653.08. The recomputed Net Worth of ₹17,90,40,717 is higher than the threshold. The Balance Sheet date of 31st March 2023 is within 18 months of the tender invitation date (07.02.2024) and is the immediate previous financial year.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>
+            <p>The bidder, R.R. Constructions, has submitted the required affidavit as per the format given in Annexure-IV. In the submitted affidavit, specifically under section 8 (Certification on submitted/ Attached Documents/ Credentials), the bidder declares that the facts stated and documents enclosed in the bid are true and correct, and they have not concealed or suppressed any facts or misrepresented any records. Furthermore, the bidder explicitly states in clause 8.4 and clause 12 that the information and documents submitted along with the tender are correct and they are fully responsible for their correctness. The submission of this affidavit is confirmed in the bidder's forwarding letter and the checklist of documents provided in the technical bid.</p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>
+            <p>In view of the above deliberations, TC is of the view that R.R. Constructions fulfills the technical and financial eligibility criteria as per the Essential Qualifying Criteria (EQC) of the tender. The bidder has demonstrated completion of similar works exceeding the required thresholds, maintained an average annual turnover significantly above 30% of the estimated cost, and possesses a net worth greater than 10% of the estimated cost. All mandatory documents, including the Power of Attorney, Integrity Pact, and Affidavit, have been submitted in the prescribed formats. </p>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+
+
+    <h2>9. RECOMMENDATIONS:</h2>
+    <p>In view of above deliberations, TC recommends to</p>
+    <ul>
+      <li>
+        Technically qualify/provisionally qualify/disqualify the bidders as
+        per following details: Based on above deliberations, following is the
+        summary:
+      </li>
+    </ul>
+    <table>
+      <tbody><tr>
+        <th>S.No</th>
+        <th>Name of tenderer</th>
+        <th>Remarks Provisionally Qualified/Qualified/Disqualified</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>R.R. Constructions</td>
+        <td>_____________</td>
+      </tr><tr>
+        <td>2</td>
+        <td>R.R. Constructions</td>
+        <td>_____________</td>
+      </tr><tr>
+        <td>3</td>
+        <td>R.R. Constructions</td>
+        <td>_____________</td>
+      </tr>
+    </tbody></table>
+    <ul>
+      <li>
+        Open the financial bids of qualified/provisionally qualified bidders.
+      </li>
+    </ul>
+    <p>
+      The competency to accept/reject/modify the above recommendations is
+      within the powers of _____________. _____________.
+    </p>
+
+    <br>
+    <br>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name of TC Member</th>
+          <th>Designation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> Sh. Anand Kumar</td>
+          <td>Additional General Manager (AGM)</td>
+        </tr><tr>
+          <td> Sh. Mukesh Kumar</td>
+          <td>Project Director (PD)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</body></html>
